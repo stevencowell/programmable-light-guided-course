@@ -37,6 +37,8 @@ const requiredFiles = [
   "index.html",
   "module.html",
   "folio.html",
+  "teacher-resources.html",
+  "scripts/build-teacher-resources.mjs",
   "guided/data.js",
   "guided/course.js",
   "guided/course.css",
@@ -55,6 +57,13 @@ const requiredFiles = [
   "source-notes/VISUAL-MANIFEST.json",
   "source-notes/VISUAL-MANIFEST.csv",
   "source-notes/VISUAL-SEMANTIC-AUDIT.md",
+  "source-notes/TEACHER-PROGRAMME-HANDOFF.json",
+  "source-notes/TEACHER-PROGRAMME-HANDOFF.md",
+  "source-notes/QUIZ-AUDIT.md",
+  "source-notes/QUIZ-REPLACEMENTS.json",
+  "source-notes/QUIZ-VALIDATION.json",
+  "source-notes/QUESTION-BANK-CORRECTED-AUDIT.json",
+  ...Array.from({ length: 5 }, (_, index) => `source-notes/module-handoffs/PROGRAMMABLE-LIGHT-MODULE-${index + 1}.json`),
   "assets/resources/high-quality-image-search-task.pdf",
   "assets/resources/timber-production.pdf",
   "assets/resources/what-is-coding.pdf",
@@ -128,6 +137,7 @@ must(course.modules.flatMap((module) => module.sections).every((section) => sect
 
 const allChecks = course.modules.flatMap((module) => module.checks);
 must(allChecks.every((check) => check.options.length === 4 && check.answerIndex >= 0 && check.answerIndex < 4), "Every knowledge check must contain four options and a valid answer index.");
+must(allChecks.every((check) => new Set(check.options.map((option) => option.trim().toLowerCase())).size === 4), "Every knowledge check must contain four distinct options.");
 must(allChecks.reduce((total, check) => total + check.options.length, 0) === 600, "Course must contain exactly 600 knowledge-check options.");
 must(allChecks.every((check) => check.question.trim() && check.correctFeedback.trim() && check.incorrectFeedback.trim()), "Every knowledge check must contain a question and useful correct/incorrect feedback.");
 must(course.modules.every((module) => module.sections.every((_, theoryIndex) => {
@@ -135,11 +145,51 @@ must(course.modules.every((module) => module.sections.every((_, theoryIndex) => 
   return new Set(questions).size === 10;
 })), "Each named theory section must contain 10 distinct question texts.");
 
+const visibleQuestionText = (check) => [check.question, ...check.options, check.correctFeedback, check.incorrectFeedback].join(" | ");
+const forbiddenVisiblePatterns = [
+  ["outcome or curriculum code", /\b(?:NESA|TE4-[A-Z]+-\d+)\b/i],
+  ["programme or cohort label", /\bStage\s*4\b/i],
+  ["teacher-control label", /\bTeacher to confirm\b/i],
+  ["assessment administration", /\b(?:final assessment|assessment mark|assessment grade|assessment result|final mark|final grade)\b/i],
+  ["file or folder administration", /\b(?:file name|folder name|Drive ID)\b/i]
+];
+const forbiddenStemPatterns = [
+  /Which NESA outcome/i,
+  /achievement of TE4-/i,
+  /What does (?:the )?(?:supplied|authorised).* (?:prove|establish)/i,
+  /What does .*worksheet.*(?:prove|establish|provide|confirm)/i,
+  /Which .* remains (?:unconfirmed|Teacher to confirm)/i,
+  /What remains (?:unconfirmed|to be confirmed)/i,
+  /Who (?:confirms|establishes)/i,
+  /Where must students obtain/i,
+  /How many .*spaces are provided/i,
+  /What is the correct status .*teacher approval/i,
+  /How does the official .*reference .*organise/i,
+  /Which item is not supplied/i,
+  /Which project detail is not confirmed/i
+];
+const forbiddenQuestionHits = [];
+course.modules.forEach((module) => module.checks.forEach((check, index) => {
+  const id = `${module.projectModule}.${Math.floor(index / 10) + 1}.${(index % 10) + 1}`;
+  forbiddenVisiblePatterns.forEach(([label, pattern]) => { if (pattern.test(visibleQuestionText(check))) forbiddenQuestionHits.push(`${id}: ${label}`); });
+  forbiddenStemPatterns.forEach((pattern) => { if (pattern.test(check.question)) forbiddenQuestionHits.push(`${id}: teacher-talk or source-administration stem`); });
+}));
+must(forbiddenQuestionHits.length === 0, `Forbidden student-facing knowledge-check content found: ${forbiddenQuestionHits.join(", ")}`);
+const answerIndexCounts = allChecks.reduce((counts, check) => { counts[check.answerIndex] += 1; return counts; }, [0, 0, 0, 0]);
+must(answerIndexCounts.join(",") === "37,38,37,38", `Corrected answer-index distribution changed: ${answerIndexCounts.join(",")}`);
+
 const questionBank = JSON.parse(read("source-notes/QUESTION-BANK.json"));
+const correctedAuditBank = JSON.parse(read("source-notes/QUESTION-BANK-CORRECTED-AUDIT.json"));
+const quizValidation = JSON.parse(read("source-notes/QUIZ-VALIDATION.json"));
+const quizReplacements = JSON.parse(read("source-notes/QUIZ-REPLACEMENTS.json"));
 must(questionBank.authoredVia === "Signed-in ChatGPT in the in-app browser, one named theory section at a time", "Question-bank authoring provenance is missing.");
 must(questionBank.sections?.length === 15, "Question bank must contain 15 named sections.");
 must(questionBank.sections.every((section) => section.questions?.length === 10), "Every question-bank section must contain exactly 10 questions.");
 must(questionBank.sections.reduce((total, section) => total + section.questions.length, 0) === 150, "Question bank must contain exactly 150 questions.");
+must(JSON.stringify(questionBank.sections) === JSON.stringify(correctedAuditBank.sections), "Generated question bank does not match the audited TASK 10E corrected bank.");
+must(quizValidation.status === "PASS" && quizValidation.replacements === 66 && quizValidation.preservedUnchanged === 84, "TASK 10E quiz-validation evidence is incomplete.");
+must(quizValidation.forbiddenVisibleHits?.length === 0 && quizValidation.duplicateStemHits?.length === 0, "TASK 10E quiz-validation evidence contains unresolved hits.");
+must(quizReplacements.replacementCount === 66 && quizReplacements.changes?.length === 66, "TASK 10E replacement map must contain exactly 66 replacements.");
 must(!/PICAXE/i.test(read("guided/data.js")) && !/PICAXE/i.test(read("source-notes/QUESTION-BANK.json")), "Student course data or question bank contains excluded PICAXE material.");
 must(course.modules.flatMap((module) => module.written).every((item) => item.prompt?.trim() && item.model?.trim()), "All 30 written tasks must include a prompt and Appropriate response example.");
 
@@ -159,6 +209,37 @@ must((folio.match(/class="folio-visual"/g) || []).length === 12, "Every folio ca
 for (let index = 1; index <= 12; index += 1) must(folio.includes(`id="folio-card-${String(index).padStart(2, "0")}"`), `Missing sequential folio-card-${String(index).padStart(2, "0")} record.`);
 must(folio.includes("80 mm × 50 mm") && folio.includes("only to the key-tag practice"), "The folio must confine 80 mm × 50 mm to the key-tag practice.");
 
+const teacherHandoff = JSON.parse(read("source-notes/TEACHER-PROGRAMME-HANDOFF.json"));
+const teacherPage = read("teacher-resources.html");
+must(teacherHandoff.modules?.length === 5 && teacherHandoff.modules.flatMap((module) => module.sections).length === 15, "Teacher programme must preserve five modules and 15 named theory sections.");
+must(teacherHandoff.teacher_to_confirm_register?.length === 23, "Teacher programme must preserve all 23 Teacher to confirm records.");
+must(teacherHandoff.resource_register?.length === 16, "Teacher programme must preserve all 16 source/resource records.");
+must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.knowledge_checks, 0) === 150, "Teacher programme evidence totals must preserve 150 checks.");
+must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.written_responses, 0) === 30, "Teacher programme evidence totals must preserve 30 written responses.");
+must(teacherPage.includes("Teacher-developed programme for local review") && teacherPage.includes("Not NESA approved"), "Teacher page must show the required development and approval labels.");
+must(teacherPage.includes('onclick="window.print()"') && teacherPage.includes(">Print / Save PDF</button>"), "Teacher page must provide Print / Save PDF.");
+must((teacherPage.match(/class="teacher-module__heading"/g) || []).length === 5 && teacherPage.includes('class="teacher-module cross-module"'), "Teacher page must render five module records plus the cross-module evidence record.");
+must((teacherPage.match(/class="confirm-record"/g) || []).length === 23, "Teacher page must render all 23 Teacher to confirm records.");
+must((teacherPage.match(/class="resource-record"/g) || []).length === 16, "Teacher page must render all 16 resource records.");
+must((teacherPage.match(/Teacher to confirm/g) || []).length >= 80, "Teacher page does not visibly preserve its local-decision boundaries.");
+teacherHandoff.modules.flatMap((module) => module.sections).forEach((record) => must(teacherPage.includes(`<strong>${record.id}</strong> ${record.title}`), `Teacher page is missing theory record ${record.id}.`));
+teacherHandoff.resource_register.forEach((record) => {
+  if (record.id) must(teacherPage.includes(record.id), `Teacher page is missing source ID ${record.id}.`);
+  if (record.local_route) {
+    must(teacherPage.includes(`href="${record.local_route}"`), `Teacher page is missing local route ${record.local_route}.`);
+    must(fs.existsSync(path.join(repo, record.local_route)), `Teacher resource route does not resolve: ${record.local_route}.`);
+  }
+});
+must(!/NESA approved programme|approved by NESA/i.test(teacherPage), "Teacher page contains a false NESA approval claim.");
+must(!/Weeks?\s*(?:4|5|6|7|8|9|10)[^<]{0,80}(?:cut|assemble|wire|solder|laser|machine)/i.test(teacherPage), "Teacher page appears to invent a Weeks 4-10 practical sequence.");
+
+const indexPage = read("index.html");
+must(indexPage.includes('<a href="teacher-resources.html">Teacher programme</a>'), "Landing navigation is missing the exact Teacher programme link.");
+must(/<a href="#outcomes">Outcomes<\/a><a href="teacher-resources\.html">Teacher programme<\/a>/.test(indexPage), "Teacher programme must follow Outcomes in the landing navigation.");
+must(indexPage.includes('<a class="module-link" href="teacher-resources.html">Open teacher programme &amp; scope and sequence →</a>'), "Landing page is missing the exact teacher programme call to action.");
+must(indexPage.indexOf('id="sources"') < indexPage.indexOf('id="teacher-resources"'), "Teacher Resources section must follow the authorised source library.");
+for (const file of ["module.html", "folio.html"]) must(read(file).includes('<a href="teacher-resources.html">Teacher programme</a>'), `${file} footer is missing the Teacher programme link.`);
+
 const courseScript = read("guided/course.js");
 must(courseScript.includes("zoomable-infographic"), "Teaching visuals must provide enlarged-image links.");
 must(courseScript.includes('target="_blank"') && courseScript.includes('visualLink.target = "_blank"'), "Module and folio visuals must open their full-resolution source in a new tab.");
@@ -169,7 +250,7 @@ const audit = read("source-notes/VISUAL-SEMANTIC-AUDIT.md");
 must(!/\b(?:PENDING|REPLACE|REMOVE)\b/.test(audit), "Visual semantic audit contains an unresolved item.");
 must((audit.match(/^\| PASS \|/gm) || []).length >= 14, "Visual semantic audit must record at least the hero, plan preview and 12 folio cards as PASS.");
 
-for (const file of ["index.html", "module.html", "folio.html"]) {
+for (const file of ["index.html", "module.html", "folio.html", "teacher-resources.html"]) {
   const html = read(file);
   must((html.match(/<h1\b/g) || []).length === 1, `${file} must contain exactly one H1.`);
   for (const match of html.matchAll(/(?:href|src)="([^"#?]+)"/g)) {

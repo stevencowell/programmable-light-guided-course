@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const repo = path.resolve(import.meta.dirname, "..");
-const handoff = path.resolve(repo, "..", "..", "..", "task-10b-programmable-light-theory", "outputs");
+const handoff = path.join(repo, "source-notes", "module-handoffs");
 const metadata = [
   { file: "PROGRAMMABLE-LIGHT-MODULE-1.json", projectModule: 1, weeks: "1-2", title: "Brief, safety and project information", summary: "Understand the project, work responsibly and read the supplied drawing without guessing missing detail." },
   { file: "PROGRAMMABLE-LIGHT-MODULE-2.json", projectModule: 2, weeks: "3-4", title: "Measurement, vector design and ideas", summary: "Develop accurate digital-design habits, source-aware research and a justified design direction." },

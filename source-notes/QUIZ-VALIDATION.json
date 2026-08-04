@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "sections": 15,
+  "questions": 150,
+  "questionsPerSection": {
+    "1.1": 10,
+    "1.2": 10,
+    "1.3": 10,
+    "2.1": 10,
+    "2.2": 10,
+    "2.3": 10,
+    "3.1": 10,
+    "3.2": 10,
+    "3.3": 10,
+    "4.1": 10,
+    "4.2": 10,
+    "4.3": 10,
+    "5.1": 10,
+    "5.2": 10,
+    "5.3": 10
+  },
+  "replacements": 66,
+  "preservedUnchanged": 84,
+  "answerIndexCounts": {
+    "A": 37,
+    "B": 38,
+    "C": 37,
+    "D": 38
+  },
+  "forbiddenVisibleHits": [],
+  "duplicateStemHits": [],
+  "errors": []
+}

@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "document_control": {
+    "title": "Programmable Light — teacher programme and scope-and-sequence handoff",
+    "status": "Teacher-developed, editable programme for school review",
+    "approval_boundary": "Not NESA approved; not a supplied formal school programme; local approval is Teacher to confirm",
+    "version": "1.0",
+    "prepared_date": "2026-08-05",
+    "evidence_cutoff": "2026-08-05",
+    "programme_owner": "Teacher to confirm",
+    "school_faculty": "Teacher to confirm",
+    "class_year_group": "Teacher to confirm",
+    "reviewed_by": "Teacher to confirm",
+    "review_date": "Teacher to confirm",
+    "next_review_due": "Teacher to confirm",
+    "duration_boundary": "Five website modules labelled across 10 weeks; actual hours, lesson count and timetable are Teacher to confirm"
+  },
+  "course_identity": {
+    "working_course_title": "Programmable Light — Stage 4 Technology 7–8",
+    "formal_course_title": "Teacher to confirm",
+    "project_drawing_title": "Programmable Lamp",
+    "stage": "Stage 4",
+    "syllabus_frame": "NSW Technology 7–8 Syllabus (2023)",
+    "programme_type": "Teacher-developed website integration programme and scope-and-sequence handoff",
+    "website_structure": {
+      "module_count": 5,
+      "website_week_label": "Weeks 1–10",
+      "theory_sections": 15,
+      "sections_per_module": 3,
+      "knowledge_checks": 150,
+      "written_responses": 30,
+      "folio_cards": 12
+    },
+    "status_boundary": "The five two-week website modules are an integration frame, not an authoritative practical timetable or production sequence"
+  },
+  "audit_position": [
+    "The authorised Drive folder is consistent with a Stage 4 Programmable Light context but contains no formal programme, assessment schedule, approved practical sequence or outcome allocation.",
+    "Week folders 04–10 are empty.",
+    "The Technology 7–8 Syllabus (2023) is implemented from 2026; the 2017 syllabus remains transitionally available until December 2027 and the school/sector implementation decision is Teacher to confirm.",
+    "Exact practical sequences, dimensions and units requiring interpretation, stock sizes, tolerances, circuitry, pins, voltage, code, machine settings, dates, weightings, rubrics, submission routes and local procedures are not supplied and are not invented."
+  ],
+  "source_authority": {
+    "authorised_drive_root": {
+      "title": "Programmable Light",
+      "id": "1KIGdTkwOtKBGXfO6qAfzaHNx3WFpHvZC",
+      "url": "https://drive.google.com/drive/folders/1KIGdTkwOtKBGXfO6qAfzaHNx3WFpHvZC"
+    },
+    "hierarchy": [
+      "Current NESA Technology 7–8 Syllabus (2023) and current school/sector implementation direction",
+      "Current NSW Department of Education and school WHS requirements, including local ESIS, training, teacher demonstrations and permissions",
+      "Authorised Programmable Light Drive folder and descendants",
+      "Byte-preserved root Programmable Lamp drawing, authorised worksheets and teacher resources",
+      "Student example content only as an example, never as a specification",
+      "Narrowly used official supplementary sources only where the supplied material has a demonstrated gap"
+    ],
+    "exclusions": [
+      "Stage 5 Electronics/PICAXE material outside the authorised folder",
+      "Generic workshop assumptions",
+      "AI-generated visuals as technical authority",
+      "Sister-site content as course authority",
+      "Empty Weeks 04–10 folders as permission to fabricate content"
+    ],
+    "principal_local_evidence": [
+      "source-notes/SOURCE-MAP.md",
+      "source-notes/OUTCOME-MAP.md",
+      "source-notes/EVIDENCE-CONTRACT.md",
+      "source-notes/SOURCE-COVERAGE.md",
+      "source-notes/THEORY-HANDOFF-MANIFEST.md",
+      "guided/data.js",
+      "guided/course.js",
+      "index.html",
+      "folio.html"
+    ]
+  },
+  "syllabus": {
+    "name": "Technology 7–8 Syllabus (2023)",
+    "implementation_from": 2026,
+    "verified_date": "2026-08-05",
+    "course_requirements": [
+      "All focus areas must be delivered across Years 7–8.",
+      "Students must undertake practical learning and project work for most of the course time.",
+      "Projects must ensure all content can be experienced across Years 7–8.",
+      "Students must document, communicate and evaluate design and production processes for projects across Years 7–8."
+    ],
+    "whole_programme_boundary": "This single unit is not evidence that the whole Years 7–8 programme meets every focus-area requirement.",
+    "official_links": {
+      "course_requirements": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/overview/course",
+      "outcomes": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/outcomes",
+      "organisation": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/overview"
+    },
+    "focus_areas": [
+      {
+        "name": "Digital and communication technologies",
+        "unit_contribution": "Image research and attribution, vector-design concepts, algorithms, sequencing, variables, loops, conditionals and digital-system planning",
+        "status": "Source-supported learning opportunity; project-specific implementation is Teacher to confirm"
+      },
+      {
+        "name": "Materials and production processes",
+        "unit_contribution": "Timber and acrylic context, measurement, plan reading, material reasoning, production planning and sustainability",
+        "status": "Source-supported learning opportunity; exact production method and Weeks 4–10 practical sequence are Teacher to confirm"
+      },
+      {
+        "name": "Engineering technologies and systems",
+        "unit_contribution": "Arduino Uno and RGB LED strip controller/output/system thinking",
+        "status": "Provisional contribution; final focus-area allocation is Teacher to confirm"
+      },
+      {
+        "name": "Food and agricultural practices",
+        "unit_contribution": "No supplied evidence in this unit",
+        "status": "Not claimed; must be addressed elsewhere in the Years 7–8 programme if required"
+      }
+    ],
+    "outcomes": [
+      {
+        "code": "TE4-SDP-01",
+        "wording": "explains relationships between sustainability, design and production",
+        "opportunity": "Timber sourcing, forest management, materials reasoning and final sustainability reflection",
+        "formal_status": "Teacher to confirm"
+      },
+      {
+        "code": "TE4-PDP-01",
+        "wording": "describes the practices and processes of designers and producers",
+        "opportunity": "Image research, idea generation, iteration and selected-design justification",
+        "formal_status": "Teacher to confirm"
+      },
+      {
+        "code": "TE4-MSC-01",
+        "wording": "explains how materials, systems and components contribute to solutions",
+        "opportunity": "Roles of timber, acrylic, Arduino Uno, RGB LED strip and other confirmed components",
+        "formal_status": "Circuit, placement and performance specifications are Teacher to confirm"
+      },
+      {
+        "code": "TE4-PPM-01",
+        "wording": "applies processes in the planning, management and production of projects",
+        "opportunity": "Plan reading, proposed planning, checkpoints and evidence records",
+        "formal_status": "Practical order and sign-off points are Teacher to confirm"
+      },
+      {
+        "code": "TE4-DES-01",
+        "wording": "communicates and evaluates design ideas and solutions",
+        "opportunity": "Six ideas, justification, annotations, test evidence and final evaluation",
+        "formal_status": "Class-agreed criteria and formal judgement arrangements are Teacher to confirm"
+      },
+      {
+        "code": "TE4-SAF-01",
+        "wording": "selects and safely uses tools, materials, technologies and processes",
+        "opportunity": "Hazard/risk/control reasoning and teacher-controlled access checkpoints",
+        "formal_status": "The website grants no equipment permission; local procedure and PPE are Teacher to confirm"
+      },
+      {
+        "code": "TE4-DIG-01",
+        "wording": "demonstrates technological literacy to safely interact in digital environments",
+        "opportunity": "Ethical image research, creator/site/URL/reuse records and responsible digital use",
+        "formal_status": "Approved imagery and digital submission destination are Teacher to confirm"
+      },
+      {
+        "code": "TE4-DIG-02",
+        "wording": "uses data and digital systems to code, design and produce projects",
+        "opportunity": "Vector layers, algorithms, sequencing, variables, loops, conditionals and test/retest evidence",
+        "formal_status": "Wiring, pins, libraries, code and upload process are Teacher to confirm"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module": 1,
+      "website_weeks": "1–2",
+      "title": "Brief, safety and project information",
+      "source_status": "Week 01 and Week 02 source material exists",
+      "learning_focus": [
+        "Explain how physical design, named materials/components, electronics and code can contribute to a complete solution.",
+        "Distinguish hazard, risk and control; identify the conditions that precede teacher-authorised machine use.",
+        "Use written dimensions and scale information carefully; record uncertainty rather than guessing."
+      ],
+      "sections": [
+        { "id": "1.1", "title": "What makes a programmable lamp?" },
+        { "id": "1.2", "title": "Workshop safety: hazards, risk controls and responsibility" },
+        { "id": "1.3", "title": "Measurement, scale and reading the supplied drawing" }
+      ],
+      "content": [
+        "Unit introduction and class-agreed success criteria",
+        "Named tool, material and component identification",
+        "Workshop hazard/risk/control reasoning",
+        "Fixed disc-sander SOP dependency and access controls",
+        "Measurement conversions, scale and supplied drawing interpretation"
+      ],
+      "evidence": {
+        "knowledge_checks": 30,
+        "written_responses": 6,
+        "folio_cards": ["01", "02", "03", "04"],
+        "external_dependency": "Disc Sander Safety Quiz result; pass rule, attempts and record location are Teacher to confirm"
+      },
+      "outcome_opportunities": ["TE4-MSC-01", "TE4-PPM-01", "TE4-DES-01", "TE4-SAF-01", "TE4-DIG-02"],
+      "focus_area_opportunities": ["Materials and production processes", "Digital and communication technologies"],
+      "source_ids": [
+        "1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE",
+        "1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k",
+        "1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi",
+        "1hV-iS7qzleaS4j7spBZuVpwn8van0pfzs3xHIq77t-o",
+        "1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg",
+        "11YSs1RBYTnC7FDGHhgTLyq6KgQyJDdErOZrAr5Lnl1k",
+        "1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ"
+      ],
+      "boundaries": [
+        "Final success criteria are Teacher to confirm",
+        "Local procedures, locations and PPE are Teacher to confirm",
+        "Quiz rules and equipment authorisation are Teacher to confirm",
+        "Drawing units and exact feature relationships are Teacher to confirm",
+        "Stock, production method and practical action are Teacher to confirm"
+      ]
+    },
+    {
+      "module": 2,
+      "website_weeks": "3–4",
+      "title": "Measurement, vector design and ideas",
+      "source_status": "Week 03 practice exists; Week 04 folder is empty",
+      "learning_focus": [
+        "Judge image resolution and design relevance while recording source and reuse information.",
+        "Organise a simple vector practice design using outlines and two layers.",
+        "Generate six ideas, compare them and justify a direction against class-agreed criteria."
+      ],
+      "sections": [
+        { "id": "2.1", "title": "Image quality, resolution and design research" },
+        { "id": "2.2", "title": "Vector design: outlines, layers and laser-ready simplicity" },
+        { "id": "2.3", "title": "Iterating ideas and building success criteria" }
+      ],
+      "content": [
+        "Two-layer key-tag vector practice",
+        "Image resolution and source/reuse record",
+        "Six distinct lamp ideas",
+        "Observable criteria and source-aware design justification"
+      ],
+      "evidence": {
+        "knowledge_checks": 30,
+        "written_responses": 6,
+        "folio_cards": ["05", "06", "07", "08"],
+        "external_dependency": "Week 03 source directs export/upload to Google Classroom; exact route, export format and naming are Teacher to confirm"
+      },
+      "outcome_opportunities": ["TE4-PDP-01", "TE4-PPM-01", "TE4-DES-01", "TE4-DIG-01", "TE4-DIG-02"],
+      "focus_area_opportunities": ["Digital and communication technologies"],
+      "source_ids": [
+        "1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249",
+        "1VmOGpI0qTXPmWWKYMRD8ewtJcGRQB1kpf_zQNSFwppQ",
+        "1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8",
+        "1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
+      ],
+      "boundaries": [
+        "The 80 mm × 50 mm maximum applies only to the key-tag practice",
+        "Week 04 arrangement is Teacher to confirm",
+        "2D Design access, export, naming, Classroom route and laser workflow/settings are Teacher to confirm",
+        "Approved imagery, copyright/reuse and final lamp criteria are Teacher to confirm"
+      ]
+    },
+    {
+      "module": 3,
+      "website_weeks": "5–6",
+      "title": "Materials, production and sustainability",
+      "source_status": "Week 05 and Week 06 folders are empty; separate timber theory exists",
+      "learning_focus": [
+        "Distinguish hardwood/softwood classification from assumptions about physical hardness.",
+        "Compare native forests and plantations using evidence rather than declaring one automatically better.",
+        "Connect drawing information, material reasoning and an evidence plan while preserving missing production detail."
+      ],
+      "sections": [
+        { "id": "3.1", "title": "Hardwood, softwood and a reasoned material choice" },
+        { "id": "3.2", "title": "Native forests, plantations and sustainable choices" },
+        { "id": "3.3", "title": "Planning timber production from drawing to evidence" }
+      ],
+      "content": [
+        "Timber groups and source-bounded material reasoning",
+        "Native forest and plantation comparison",
+        "Sustainability reasoning with evidence limitations",
+        "Cautious evidence planning linked to the supplied drawing and teacher checkpoints"
+      ],
+      "evidence": {
+        "knowledge_checks": 30,
+        "written_responses": 6,
+        "folio_cards": ["09"],
+        "cross_module_folio_cards": ["11"],
+        "cross_module_condition": "Card 11 is used only when teacher-confirmed production work supplies an authentic stage/checkpoint"
+      },
+      "outcome_opportunities": ["TE4-SDP-01", "TE4-PDP-01", "TE4-MSC-01", "TE4-PPM-01", "TE4-DES-01", "TE4-SAF-01"],
+      "focus_area_opportunities": ["Materials and production processes"],
+      "source_ids": [
+        "1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM",
+        "1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg",
+        "11YSs1RBYTnC7FDGHhgTLyq6KgQyJDdErOZrAr5Lnl1k",
+        "1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ"
+      ],
+      "supplementary_sources": ["DAFF forestry glossary", "ABARES forest reporting", "DCCEEW forests"],
+      "boundaries": [
+        "No Week 05–06 lesson or practical sequence is supplied",
+        "Video identity is Teacher to confirm",
+        "Material supplier, origin, certification, stock, grade, finish and tolerance are Teacher to confirm",
+        "Construction methods, tools, cutting list, checkpoints and required photos are Teacher to confirm"
+      ]
+    },
+    {
+      "module": 4,
+      "website_weeks": "7–8",
+      "title": "Coding and digital systems",
+      "source_status": "Week 07 and Week 08 folders are empty; separate coding theory exists",
+      "learning_focus": [
+        "Explain algorithms, sequencing, syntax, variables, loops and conditionals using general language.",
+        "Describe an input/process/output or controller/output relationship at a conceptual level.",
+        "Plan intended behaviour and an observable test case without fabricating hardware or code."
+      ],
+      "sections": [
+        { "id": "4.1", "title": "Coding language: algorithms, sequencing and syntax" },
+        { "id": "4.2", "title": "Variables, loops and conditionals for light behaviour" },
+        { "id": "4.3", "title": "Connecting code, controller and light as a system" }
+      ],
+      "content": [
+        "General coding terminology",
+        "Conceptual algorithms, pseudocode, flowcharts or block diagrams",
+        "Instructions/controller/light-output system reasoning",
+        "Observable test-case planning"
+      ],
+      "evidence": {
+        "knowledge_checks": 30,
+        "written_responses": 6,
+        "folio_cards": ["10"],
+        "external_dependency": "Any code screenshot or system test must come from teacher-authorised work and record the actual source/configuration"
+      },
+      "outcome_opportunities": ["TE4-MSC-01", "TE4-DES-01", "TE4-DIG-01", "TE4-DIG-02"],
+      "focus_area_opportunities": ["Digital and communication technologies", "Engineering technologies and systems — provisional"],
+      "source_ids": [
+        "1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k",
+        "1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE",
+        "1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
+      ],
+      "supplementary_sources": ["Official Arduino Language Reference, limited to recorded vocabulary gaps"],
+      "boundaries": [
+        "Week 07–08 activities and ClickView link are Teacher to confirm",
+        "Input/control method, circuit, wiring, pins, voltage/current, RGB strip type and power are Teacher to confirm",
+        "Library, programming language, code, values, timings and upload process are Teacher to confirm",
+        "Electronics and soldering safety procedures are Teacher to confirm"
+      ]
+    },
+    {
+      "module": 5,
+      "website_weeks": "9–10",
+      "title": "Testing, evidence and evaluation",
+      "source_status": "Week 09 and Week 10 folders are empty; source-bounded integration/evaluation theory exists",
+      "learning_focus": [
+        "Connect confirmed design, material, component and coding evidence without overstating practical completion.",
+        "Compare an observation with a confirmed criterion, change one controlled element when authorised and record the retest.",
+        "Evaluate quality, sustainability and learning using cited evidence and acknowledged limitations."
+      ],
+      "sections": [
+        { "id": "5.1", "title": "Integrating design, materials, electronics and code" },
+        { "id": "5.2", "title": "Testing, debugging and improving the solution" },
+        { "id": "5.3", "title": "Evaluating quality, sustainability and learning" }
+      ],
+      "content": [
+        "Source-bound integration map",
+        "Observation, test and retest record where authorised work exists",
+        "Criteria-based evaluation citing earlier evidence",
+        "Sustainability and learning reflection with explicit evidence limitations"
+      ],
+      "evidence": {
+        "knowledge_checks": 30,
+        "written_responses": 6,
+        "folio_cards": ["11", "12"],
+        "workflow_outputs": ["Completion summary", "JSON backup", "Print / Save PDF"],
+        "workflow_boundary": "Workflow outputs are not marks or automatic submission"
+      },
+      "outcome_opportunities": ["TE4-SDP-01", "TE4-PDP-01", "TE4-MSC-01", "TE4-PPM-01", "TE4-DES-01", "TE4-SAF-01", "TE4-DIG-02"],
+      "focus_area_opportunities": ["Digital and communication technologies", "Materials and production processes", "Engineering technologies and systems — provisional"],
+      "source_ids": [
+        "1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE",
+        "1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8",
+        "1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM",
+        "1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k",
+        "1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg",
+        "1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ"
+      ],
+      "boundaries": [
+        "Week 09–10 activities and final project status are Teacher to confirm",
+        "Testing method, values, thresholds, observations and teacher sign-offs are Teacher to confirm",
+        "Required photo/code, assessment judgement, filename and hand-in route are Teacher to confirm",
+        "Students must record actual observations, not assumed results"
+      ]
+    }
+  ],
+  "cross_module_evidence": {
+    "folio_card": "11",
+    "title": "Production, problem-solving and test record",
+    "source_note_mapping": "Referenced from materials/production and later production/testing contexts",
+    "current_ui_mapping": "Linked primarily to Module 5",
+    "programme_treatment": "Cross-module evidence record usable only after a teacher supplies the relevant practical instruction and checkpoint",
+    "sequence_boundary": "This treatment does not establish a practical sequence"
+  },
+  "resource_register": [
+    {
+      "resource": "Authorised Drive root",
+      "id": "1KIGdTkwOtKBGXfO6qAfzaHNx3WFpHvZC",
+      "role": "Project-source authority",
+      "boundary": "Only this folder and descendants are authorised project sources"
+    },
+    {
+      "resource": "Root Programmable Lamp drawing",
+      "id": "1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ",
+      "local_route": "assets/plans/programmable-lamp-drawing.pdf",
+      "role": "Likely master drawing",
+      "boundary": "Preserve bytes; use Open larger PDF access; do not infer units, assignments, tolerances, settings or full method"
+    },
+    {
+      "resource": "Week 02 Programmable Lamp drawing copy",
+      "id": "1oORhoz0nkpXrgbNX-nbw1Id0zqUCciLL",
+      "role": "Student-delivery duplicate, textually identical",
+      "boundary": "Do not silently substitute interpretations"
+    },
+    {
+      "resource": "Unit Introduction & Success Criteria",
+      "id": "1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE",
+      "boundary": "Blank/class-agreed criteria are prompts, not an approved specification"
+    },
+    {
+      "resource": "Workshop Safety",
+      "id": "1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k",
+      "boundary": "Local locations and procedures are Teacher to confirm"
+    },
+    {
+      "resource": "Fixed disc-sander SOP",
+      "id": "1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi",
+      "local_route": "assets/resources/disc-sander-sop.pdf",
+      "boundary": "Use with current ESIS, training, demonstration, test, teacher permission and observed safe use; it does not authorise access"
+    },
+    {
+      "resource": "Disc Sander Safety Quiz",
+      "id": "1hV-iS7qzleaS4j7spBZuVpwn8van0pfzs3xHIq77t-o",
+      "boundary": "Questions, key, pass threshold, attempt policy and response destination were not available to the audit"
+    },
+    {
+      "resource": "Tool & Materials Identification",
+      "id": "1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg",
+      "boundary": "Identifies items; does not prove final use, placement or specification"
+    },
+    {
+      "resource": "Measurement Conversions",
+      "id": "11YSs1RBYTnC7FDGHhgTLyq6KgQyJDdErOZrAr5Lnl1k",
+      "boundary": "Physical sample dependency and any unstated drawing unit are Teacher to confirm"
+    },
+    {
+      "resource": "2D Design Practice",
+      "id": "1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249",
+      "local_route": "assets/resources/2d-design-practice.pdf",
+      "boundary": "80 mm × 50 mm maximum is for the key-tag practice only; Classroom, export and laser details are Teacher to confirm"
+    },
+    {
+      "resource": "High-Quality Image Search Task",
+      "id": "1VmOGpI0qTXPmWWKYMRD8ewtJcGRQB1kpf_zQNSFwppQ",
+      "boundary": "Final image criteria and reuse/publishing approval are Teacher to confirm"
+    },
+    {
+      "resource": "Lamp Idea Iteration",
+      "id": "1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8",
+      "boundary": "One filled student example is inspiration, not a requirement"
+    },
+    {
+      "resource": "Timber Production",
+      "id": "1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM",
+      "local_route": "assets/resources/timber-production.pdf",
+      "boundary": "Missing video identity and practical application sequence are Teacher to confirm"
+    },
+    {
+      "resource": "What is coding",
+      "id": "1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k",
+      "local_route": "assets/resources/what-is-coding.pdf",
+      "boundary": "ClickView identity/link and project implementation are Teacher to confirm"
+    },
+    {
+      "resource": "Vernier-caliper simulator executable",
+      "id": "1-dOE_Mn3k0M1eUKkMz61iGgzlHU9lMg4",
+      "boundary": "Exclude from default distribution/use until provenance, licence, version, security approval and curriculum purpose are confirmed"
+    },
+    {
+      "resource": "AI-generated website visuals",
+      "role": "Illustration and evidence prompts",
+      "boundary": "Never a plan, specification, safe-work procedure or proof of a completed student outcome"
+    }
+  ],
+  "assessment_and_evidence_status": [
+    {
+      "item": "15 theory sections",
+      "current_status": "Present across five modules; source-bounded",
+      "formal_boundary": "Teaching/learning content, not a supplied formal task"
+    },
+    {
+      "item": "150 four-option knowledge checks",
+      "current_status": "Present; 10 per theory section with corrective feedback",
+      "formal_boundary": "Formative/self-check evidence only unless the school formally determines otherwise"
+    },
+    {
+      "item": "30 scaffolded written responses",
+      "current_status": "Present; two per theory section with an Appropriate response example",
+      "formal_boundary": "No supplied mark scheme, weighting or formal judgement process"
+    },
+    {
+      "item": "12-card student folio",
+      "current_status": "Present; source/evidence/caption fields, device-local autosave, backup and print workflow",
+      "formal_boundary": "Evidence preparation, not cloud submission or a formal task by itself"
+    },
+    {
+      "item": "Disc Sander Safety Quiz",
+      "current_status": "Supplied Google Form dependency",
+      "formal_boundary": "Pass/attempt/record rules and relationship to permission are Teacher to confirm; passing alone does not authorise use"
+    },
+    {
+      "item": "Week 03 practice export",
+      "current_status": "Source directs an exported 2D Design practice file to Google Classroom",
+      "formal_boundary": "Classroom URL/class, filename, export format, due date and assessment status are Teacher to confirm"
+    },
+    {
+      "item": "Practical/product evidence",
+      "current_status": "Folio scaffolds can record genuine stages, tests and evaluation",
+      "formal_boundary": "Weeks 4–10 instructions, checkpoints, required photos, functional tests and final product expectations are not supplied"
+    },
+    {
+      "item": "Formal assessment task",
+      "current_status": "No authoritative notification or schedule supplied",
+      "formal_boundary": "Task number, name, issue/due date, term/week, marks, weighting, outcomes assessed, rubric and submission rules must not appear until confirmed"
+    }
+  ],
+  "evidence_workflow_boundaries": [
+    "Browser localStorage is specific to the browser/profile/device and is not cloud storage or submission.",
+    "JSON backup covers text/state records; photos must be kept separately and reselected before printing unless a separately tested, approved method is implemented.",
+    "Print / Save PDF is an evidence export, not proof of receipt, marking or formal submission.",
+    "Completion percentages and complete/started/blank counts are workflow information, not marks."
+  ],
+  "safety_and_dependency_boundaries": [
+    "The website and programme do not grant permission to use equipment.",
+    "Current school WHS procedures, ESIS, teacher demonstrations, training and supervision override website wording.",
+    "Fixed disc-sander use requires current controls, teacher demonstration, required safety test, teacher permission and observed safe use; local PPE, emergency-stop and first-aid arrangements are Teacher to confirm.",
+    "Laser-cutter workflow, file checking, authorised material, ventilation, supervision and settings are Teacher to confirm; the key-tag activity is software practice, not machine authorisation.",
+    "Soldering/electronics work must not begin from this programme alone; approved circuitry, ratings, power, connections and local safety procedure are Teacher to confirm.",
+    "The supplied drawing must be opened at full size; a screen preview must not be measured, and unclear units/features must be referred to the teacher.",
+    "Weeks 4–10 practical content is a documented dependency gap; teacher-approved job sequence/checkpoint records are required before practical delivery is represented.",
+    "Student photos and researched images require current privacy, copyright, reuse and publishing decisions; public website access is not consent.",
+    "The optional executable is excluded pending local security and curriculum approval."
+  ],
+  "teacher_to_confirm_register": [
+    { "id": "TTC-01", "decision": "Formal course title, year/class, faculty and programme owner", "reason": "Establishes local identity and accountability", "status": "Teacher to confirm" },
+    { "id": "TTC-02", "decision": "School implementation of the 2023 syllabus during the transition period", "reason": "Confirms the governing local syllabus record", "status": "Teacher to confirm" },
+    { "id": "TTC-03", "decision": "Whole Years 7–8 focus-area coverage and this unit's final focus-area allocation", "reason": "This unit does not evidence all four focus areas", "status": "Teacher to confirm" },
+    { "id": "TTC-04", "decision": "Final outcome selection, teaching emphasis and any formally assessed outcomes", "reason": "Current mapping records opportunities only", "status": "Teacher to confirm" },
+    { "id": "TTC-05", "decision": "Timetable: start/end, lesson count, hours and actual week placement", "reason": "Website week labels are not a supplied timetable", "status": "Teacher to confirm" },
+    { "id": "TTC-06", "decision": "Approved project brief, constraints and observable success criteria", "reason": "Supplied criteria fields are blank/class-agreed", "status": "Teacher to confirm" },
+    { "id": "TTC-07", "decision": "Drawing units, exact feature/dimension relationships, material assignment, stock, tolerances and approved interpretation", "reason": "Prevents inferred specifications", "status": "Teacher to confirm" },
+    { "id": "TTC-08", "decision": "Teacher-approved Weeks 4–10 practical sequence, job sheets and sign-off checkpoints", "reason": "Empty week folders are a delivery dependency", "status": "Teacher to confirm" },
+    { "id": "TTC-09", "decision": "Current local WHS/ESIS, PPE, first-aid, emergency-stop, supervision and incident arrangements", "reason": "Required before practical delivery", "status": "Teacher to confirm" },
+    { "id": "TTC-10", "decision": "Disc-sander quiz questions/key authority, pass threshold, attempts, response record and access rule", "reason": "Supplied Form details were not available", "status": "Teacher to confirm" },
+    { "id": "TTC-11", "decision": "Approved tools, demonstrations, machine permissions and stage-specific safe-work procedures", "reason": "Named items do not authorise use", "status": "Teacher to confirm" },
+    { "id": "TTC-12", "decision": "2D Design access, export format, filename, Classroom destination and approved laser workflow/settings", "reason": "Required to deliver the Week 03 dependency safely and consistently", "status": "Teacher to confirm" },
+    { "id": "TTC-13", "decision": "Image-search criteria, copyright/reuse teaching, final imagery approval and publishing permission", "reason": "Research access is not permission to reuse or publish", "status": "Teacher to confirm" },
+    { "id": "TTC-14", "decision": "Timber Production and coding video identities/links and student access", "reason": "Source documents depend on missing media details", "status": "Teacher to confirm" },
+    { "id": "TTC-15", "decision": "Circuit, wiring, pins, voltage/current, RGB strip type, power, library, code, values, timings and upload procedure", "reason": "No authoritative electronic implementation is supplied", "status": "Teacher to confirm" },
+    { "id": "TTC-16", "decision": "Electronics/soldering safety procedure, competency check and supervision", "reason": "Required before practical electronics work", "status": "Teacher to confirm" },
+    { "id": "TTC-17", "decision": "Material source, grade, stock, finish, supplier/origin/certification and project sustainability conclusion", "reason": "Prevents generic or unsupported claims", "status": "Teacher to confirm" },
+    { "id": "TTC-18", "decision": "Functional/aesthetic/build criteria, test methods, expected observations, retest rules and final sign-off", "reason": "Required for authentic testing/evaluation", "status": "Teacher to confirm" },
+    { "id": "TTC-19", "decision": "Required practical photos/evidence, privacy consent, storage and publication rules", "reason": "Protects students and establishes usable evidence", "status": "Teacher to confirm" },
+    { "id": "TTC-20", "decision": "Formal assessment status; task number/name; issue/due dates; marks/weighting; rubric; notification; submission route", "reason": "No authoritative assessment schedule or notification is supplied", "status": "Teacher to confirm" },
+    { "id": "TTC-21", "decision": "Classroom/Drive hand-in destinations, filenames, declarations and receipt/late-work process", "reason": "Browser evidence is not automatic submission", "status": "Teacher to confirm" },
+    { "id": "TTC-22", "decision": "Adjustments, accessibility needs and alternative evidence pathways", "reason": "Required for equitable access to practical learning and evidence", "status": "Teacher to confirm" },
+    { "id": "TTC-23", "decision": "Final faculty review, approval date, next review date and change owner", "reason": "Required before calling this a locally approved programme", "status": "Teacher to confirm" }
+  ],
+  "integration_recommendation": {
+    "route": "teacher-resources.html",
+    "location": "Repository root beside index.html, module.html and folio.html",
+    "page_title": "Teacher programme & scope and sequence",
+    "status_banner": "Teacher-developed programme for local review. Not NESA approved. Confirm all local programme, assessment, practical and safety decisions before use.",
+    "print_button_text": "Print / Save PDF",
+    "print_action": "window.print()",
+    "presentation": [
+      "Use stacked records rather than a very wide timetable",
+      "Support 390 px screen width",
+      "Use A4 portrait print styling",
+      "Hide navigation, hub bar and print controls when printing",
+      "Print title, version, prepared date, review status and source IDs/URLs",
+      "Do not include answer keys, student information or locally sensitive safety details on the public page"
+    ],
+    "links": [
+      {
+        "source_file": "index.html",
+        "placement": "Existing course navigation after Outcomes",
+        "exact_html": "<a href=\"teacher-resources.html\">Teacher programme</a>"
+      },
+      {
+        "source_file": "index.html",
+        "placement": "After the authorised source library section #sources and before </main>",
+        "section_heading": "Teacher programme & scope and sequence",
+        "exact_html": "<a class=\"module-link\" href=\"teacher-resources.html\">Open teacher programme &amp; scope and sequence →</a>"
+      },
+      {
+        "source_file": "teacher-resources.html",
+        "placement": "Above the page title",
+        "exact_html": "<a href=\"index.html\">← Back to course home</a>"
+      },
+      {
+        "source_file": "module.html and folio.html",
+        "placement": "Footer as a secondary text link, outside the student completion flow",
+        "exact_link_text": "Teacher programme"
+      }
+    ],
+    "public_access_boundary": "A GitHub Pages teacher-resources page is public, not a secure staff-only area"
+  },
+  "integration_acceptance_checks": [
+    "Page visibly says Teacher-developed and Not NESA approved.",
+    "Every missing local value remains Teacher to confirm.",
+    "Five module titles, week labels, 15 theory sections and evidence counts match the current site.",
+    "No Weeks 4–10 practical sequence, drawing interpretation, circuit, machine setting, date, weighting, rubric or local procedure is added without authority.",
+    "All source IDs and local asset routes resolve.",
+    "Top-navigation, landing-page and footer links reach teacher-resources.html.",
+    "Print / Save PDF produces a legible, complete A4 portrait record.",
+    "Desktop and 390 px layouts have no overflow, clipped tables or inaccessible controls.",
+    "The teacher page does not change student autosave keys, folio records or assessment status."
+  ],
+  "change_record": [
+    {
+      "version": "1.0",
+      "date": "2026-08-05",
+      "change": "Initial teacher-developed audit-ready programme and TASK10 integration handoff",
+      "authority": "TASK10 source map, current source notes/site content and NESA Technology 7–8 Syllabus (2023)",
+      "review_result": "Local review Teacher to confirm"
+    }
+  ],
+  "handoff_boundary": {
+    "ready_for": "TASK10 integration review",
+    "repository_edited": false,
+    "teacher_resources_html_created_in_final_repository": false,
+    "pushed": false,
+    "deployed": false,
+    "live_status_claimed": false
+  }
+}

@@ -160,16 +160,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "What does the supplied component list prove?",
+          "question": "Why must the lamp’s materials, electronics and code be considered together?",
           "options": [
-            "Every exact electrical connection",
-            "Which items students must identify and investigate",
-            "The final laser settings",
-            "The required pin assignments"
+            "They all perform the same role",
+            "They remove the need for design decisions",
+            "They can be selected without considering function",
+            "They contribute to one complete solution"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The list identifies project items, but it does not establish their exact connection or operation.",
-          "incorrectFeedback": "Consider the difference between naming a component and providing verified technical instructions for using it.",
+          "answerIndex": 3,
+          "correctFeedback": "The lamp works as an integrated solution, so decisions in one area can affect the others.",
+          "incorrectFeedback": "Revisit how physical design, lighting, electronics and code contribute to the same solution.",
           "source": "Drive file ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
@@ -188,198 +188,198 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "Which NESA outcome focuses on how materials, systems and components contribute to solutions?",
+          "question": "Which area is concerned mainly with the accuracy and care of the physical making?",
           "options": [
-            "TE4-DES-01",
-            "TE4-SAF-01",
-            "TE4-MSC-01",
-            "TE4-DIG-01"
-          ],
-          "answerIndex": 2,
-          "correctFeedback": "TE4-MSC-01 examines the contribution of materials, systems and components to solutions.",
-          "incorrectFeedback": "Look for the outcome code connected to materials, systems and components rather than communication or safety.",
-          "source": "NESA outcome TE4-MSC-01"
-        },
-        {
-          "theoryIndex": 0,
-          "question": "What supports achievement of TE4-DES-01 in this project?",
-          "options": [
-            "Guessing how the electronics connect",
-            "Memorising every tool name only",
-            "Using unconfirmed laser settings",
-            "Communicating and evaluating ideas against agreed criteria"
+            "Aesthetics",
+            "Programming syntax",
+            "Image resolution",
+            "Construction and build quality"
           ],
           "answerIndex": 3,
-          "correctFeedback": "TE4-DES-01 concerns communicating and evaluating design ideas and solutions.",
-          "incorrectFeedback": "Focus on the outcome’s two key actions: communicating ideas and evaluating solutions.",
-          "source": "NESA outcome TE4-DES-01"
-        },
-        {
-          "theoryIndex": 0,
-          "question": "Who establishes the exact success criteria for this project?",
-          "options": [
-            "The class through discussion with the teacher",
-            "Each student without consultation",
-            "The component manufacturer alone",
-            "The laser cutter operator alone"
-          ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet requires class-agreed criteria developed through teacher-guided discussion.",
-          "incorrectFeedback": "Review how the worksheet says the criteria and project constraints will be established.",
+          "correctFeedback": "Construction and build quality focus on how accurately and carefully the physical product is made.",
+          "incorrectFeedback": "Separate the quality of physical making from appearance, coding rules and digital-image detail.",
           "source": "Drive file ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
         },
         {
           "theoryIndex": 0,
-          "question": "Where must students obtain exact circuitry, procedures and settings?",
+          "question": "Which action best communicates and evaluates a design idea?",
           "options": [
-            "From the appearance of example lamps",
-            "From guesses based on the component list",
-            "From authorised drawings, teacher demonstrations and class-agreed criteria",
-            "From another student’s unfinished project"
+            "Naming a component without explaining its role",
+            "Explaining design choices and comparing them with clear criteria",
+            "Copying the first idea without comparison",
+            "Listing tools in alphabetical order"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "These authorised sources control the project’s exact practical details.",
-          "incorrectFeedback": "Do not treat examples or named components as technical instructions. Identify the authorised sources that control practical work.",
+          "answerIndex": 1,
+          "correctFeedback": "Clear communication explains the choices made, while evaluation compares the idea with stated criteria.",
+          "incorrectFeedback": "Look for the action that both explains the idea and judges it against something checkable.",
+          "source": "Drive file ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
+        },
+        {
+          "theoryIndex": 0,
+          "question": "Which statement is the most useful success criterion?",
+          "options": [
+            "The lamp should be good",
+            "The design should use every possible material",
+            "The first idea should be accepted",
+            "The finished result can be checked against a clearly stated requirement"
+          ],
+          "answerIndex": 3,
+          "correctFeedback": "A useful criterion states something observable that can be checked when the solution is evaluated.",
+          "incorrectFeedback": "Choose the statement that gives a clear basis for checking the finished solution.",
+          "source": "Drive file ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
+        },
+        {
+          "theoryIndex": 0,
+          "question": "What should a student do when a component relationship or practical detail is unclear?",
+          "options": [
+            "Guess from a similar project",
+            "Choose the most convenient connection",
+            "Treat the component list as a complete procedure",
+            "Record the uncertainty and verify the detail before proceeding"
+          ],
+          "answerIndex": 3,
+          "correctFeedback": "Recording and verifying an unknown prevents an unsupported assumption from becoming part of the project.",
+          "incorrectFeedback": "Choose the response that protects accuracy by resolving missing information before practical work.",
           "source": "Drive file IDs 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE and 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
           "theoryIndex": 1,
-          "question": "What is the best description of a hazard?",
+          "question": "What is a hazard?",
           "options": [
-            "A completed safety test",
-            "Something unsafe or capable of causing harm",
-            "A teacher’s permission to begin",
-            "A record of completed work"
+            "The possible seriousness of an injury",
+            "A source or situation that could cause harm",
+            "A completed safety record",
+            "A control used to reduce risk"
           ],
           "answerIndex": 1,
-          "correctFeedback": "A hazard is a source or situation that could cause injury or other harm.",
-          "incorrectFeedback": "Revisit the difference between something that could cause harm and a control used to reduce harm.",
+          "correctFeedback": "A hazard is something with the potential to cause injury or other harm.",
+          "incorrectFeedback": "Separate the thing that could cause harm from the risk it creates and the control used to reduce it.",
           "source": "Drive file ID 1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k"
         },
         {
           "theoryIndex": 1,
-          "question": "When may a Stage 4 student use the fixed disc sander?",
+          "question": "When may a student use the fixed disc sander?",
           "options": [
-            "When another student explains it",
-            "Whenever the machine is available",
-            "After reading the machine label",
-            "After demonstration, a passed safety test, permission and observed safe use"
+            "Whenever the machine is free",
+            "After watching another student use it",
+            "Only after required training, a passed safety test, permission and demonstrated safe use",
+            "After reading one warning label"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "All four requirements must control student use of the fixed disc sander.",
-          "incorrectFeedback": "Look for the complete authorisation process rather than one informal source of information.",
+          "answerIndex": 2,
+          "correctFeedback": "All required training, testing, permission and safe-use conditions must be met before operation.",
+          "incorrectFeedback": "Look for the complete safety-authorisation process, not one isolated step.",
           "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi; NESA TE4-SAF-01"
         },
         {
           "theoryIndex": 1,
           "question": "What should a student do after noticing faulty equipment?",
           "options": [
-            "Report it to the teacher immediately",
-            "Test it carefully before reporting it",
-            "Leave it for the next class",
-            "Ask another student to repair it"
+            "Keep using it carefully",
+            "Try to repair it",
+            "Leave it for the next person",
+            "Stop using it and report the fault immediately"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "Faulty or unsafe equipment must be reported immediately rather than tested or repaired by students.",
-          "incorrectFeedback": "Focus on the required reporting response, not on investigating or correcting the fault yourself.",
+          "answerIndex": 3,
+          "correctFeedback": "Faulty equipment must be taken out of use and reported immediately.",
+          "incorrectFeedback": "Do not test, repair or ignore equipment that may be unsafe.",
           "source": "Drive file IDs 1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k and 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
         },
         {
           "theoryIndex": 1,
-          "question": "Which action is required before adjusting or cleaning the fixed disc sander?",
+          "question": "What must happen before the fixed disc sander is adjusted or cleaned?",
           "options": [
-            "Remove the guard",
-            "Ask another student to hold the machine",
-            "Switch it off and bring it to a complete stop",
-            "Increase the dust extraction"
+            "The guard is removed",
+            "The work is held against the disc",
+            "The machine is switched off and completely stopped",
+            "A second student enters the machine zone"
           ],
           "answerIndex": 2,
-          "correctFeedback": "The machine must be switched off and fully stopped before adjustments or cleaning begin.",
-          "incorrectFeedback": "Identify the control that removes movement before anyone approaches the machine for another task.",
+          "correctFeedback": "The machine must be switched off and fully stopped before adjustment or cleaning.",
+          "incorrectFeedback": "Choose the control that removes machine movement before another task begins.",
           "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
         },
         {
           "theoryIndex": 1,
           "question": "Why does good workshop organisation matter?",
           "options": [
-            "It replaces the need for PPE",
-            "It helps prevent unsafe conditions and protects people",
-            "It allows more students into a machine zone",
-            "It removes the need for teacher instructions"
+            "It replaces PPE",
+            "It reduces avoidable hazards and supports safe movement",
+            "It makes training unnecessary",
+            "It allows damaged tools to remain in use"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Clean, organised workspaces reduce hazards but do not replace other controls.",
-          "incorrectFeedback": "Consider organisation as one part of safety, not as a substitute for PPE, training or instructions.",
+          "correctFeedback": "A clean, organised workspace reduces avoidable hazards but still works alongside other safety controls.",
+          "incorrectFeedback": "Organisation supports safe work; it does not replace PPE, training or equipment checks.",
           "source": "Drive file ID 1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k"
         },
         {
           "theoryIndex": 1,
-          "question": "How many students may use the fixed disc sander at one time?",
+          "question": "How many students may be in the fixed disc-sander machine zone while it is being used?",
           "options": [
-            "One student",
-            "Two students",
-            "Three students with permission",
-            "Any number who have passed the test"
-          ],
-          "answerIndex": 0,
-          "correctFeedback": "The SOP allows only one student to operate the disc sander at a time.",
-          "incorrectFeedback": "Revisit the Stage 4 machine-zone controls and separate the operator from nearby observers.",
-          "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
-        },
-        {
-          "theoryIndex": 1,
-          "question": "Which group contains only risks named for the fixed disc sander?",
-          "options": [
-            "Noise, electric shock and cuts",
-            "Falls, collisions and chemical burns",
-            "Crushing, glare and vibration",
-            "Eye injuries, abrasions, burns, entanglement and dust inhalation"
+            "Two",
+            "Three",
+            "Any number wearing eye protection",
+            "One"
           ],
           "answerIndex": 3,
-          "correctFeedback": "These are the risks specifically listed in the authorised fixed disc-sander SOP.",
-          "incorrectFeedback": "Return to the named machine risks rather than adding hazards from other workshop situations.",
+          "correctFeedback": "Only one student may be in the machine zone while the disc sander is being used.",
+          "incorrectFeedback": "The machine-zone rule limits the space to the single operator.",
           "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
         },
         {
           "theoryIndex": 1,
-          "question": "What should a student do if another student is behaving unsafely?",
+          "question": "Which group contains only risks associated with the fixed disc sander?",
           "options": [
-            "Ignore it unless an injury occurs",
-            "Copy the behaviour to show why it is unsafe",
-            "Report the unsafe behaviour immediately",
-            "Record it after the lesson only"
+            "Sunburn, dehydration and traffic",
+            "Eye injury, abrasion, burns, entanglement and dust inhalation",
+            "Chemical spills, radiation and flooding",
+            "Noise from music, glare and wet weather"
+          ],
+          "answerIndex": 1,
+          "correctFeedback": "The identified disc-sander risks include eye injury, abrasion, burns, entanglement and dust inhalation.",
+          "incorrectFeedback": "Choose the group connected directly to contact, moving parts and sanding dust.",
+          "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
+        },
+        {
+          "theoryIndex": 1,
+          "question": "What should a student do after noticing unsafe behaviour in the workshop?",
+          "options": [
+            "Join in so the person stops",
+            "Ignore it until the end of the lesson",
+            "Move clear of the danger and report it immediately",
+            "Post a warning online"
           ],
           "answerIndex": 2,
-          "correctFeedback": "Immediate reporting allows the teacher to respond before the behaviour causes harm.",
-          "incorrectFeedback": "Choose the response that addresses the risk promptly without joining in or delaying action.",
+          "correctFeedback": "Moving clear and reporting the behaviour promptly helps prevent harm.",
+          "incorrectFeedback": "Choose the response that addresses the danger immediately without increasing it.",
           "source": "Drive file ID 1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k"
         },
         {
           "theoryIndex": 1,
-          "question": "Which statement correctly describes an SOP?",
+          "question": "Which statement correctly describes a safe operating procedure (SOP)?",
           "options": [
-            "It supports training but may not cover every possible hazard",
-            "It replaces teacher demonstrations and permission",
-            "It gives students automatic permission to operate equipment",
-            "It applies without local workshop procedures"
+            "It replaces practical training",
+            "It guarantees that every hazard has been removed",
+            "It gives permission to improvise with equipment",
+            "It supports training and other safety controls"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The SOP complements training and other controls rather than replacing them.",
-          "incorrectFeedback": "Look for the statement that recognises both the value and the limits of an SOP.",
+          "answerIndex": 3,
+          "correctFeedback": "An SOP supports safe work but must be used with training, permission and local controls.",
+          "incorrectFeedback": "An SOP is an important control, but it does not remove the need for the other controls.",
           "source": "Drive file ID 1pA-ABXOT5jXS1Wnr_6kougMTh69uxVZi"
         },
         {
           "theoryIndex": 1,
           "question": "What does personal responsibility in the workshop include?",
           "options": [
-            "Choosing which rules seem necessary",
-            "Following instructions, staying organised and reporting hazards",
-            "Operating equipment to gain experience",
-            "Correcting faulty equipment without assistance"
+            "Using unfamiliar equipment when others are busy",
+            "Following controls, wearing required PPE and reporting hazards",
+            "Repairing faults without training",
+            "Leaving housekeeping to another student"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Personal responsibility means making safe choices and responding properly to hazards every lesson.",
-          "incorrectFeedback": "Consider the behaviours each student can control without taking on tasks reserved for the teacher.",
+          "correctFeedback": "Personal responsibility means making safe choices and responding properly to hazards each lesson.",
+          "incorrectFeedback": "Choose the actions that each student can control and that reduce risk.",
           "source": "Drive file ID 1FmKuNB8FrUgDZ-N572uJPaK5e3BITduHcYVzkGQLg0k; NESA TE4-SAF-01"
         },
         {
@@ -412,16 +412,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "How should measurements taken with a workshop ruler be recorded for this activity?",
+          "question": "How should a measurement taken with a workshop ruler be recorded?",
           "options": [
-            "In millimetres",
+            "As a screen percentage",
             "Without a unit",
-            "In metres only",
-            "As a drawing scale"
+            "In millimetres",
+            "Only as a rough fraction"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet directs students to measure with a ruler and record each result in millimetres.",
-          "incorrectFeedback": "Look for the required recording unit rather than every unit that may appear on a ruler.",
+          "answerIndex": 2,
+          "correctFeedback": "Recording the value in millimetres keeps the measurement precise and unambiguous.",
+          "incorrectFeedback": "Use the unit identified for ruler measurements in this project.",
           "source": "Drive file ID 11YSs1RBYTnC7FDGHhgTLyq6KgQyJDdErOZrAr5Lnl1k"
         },
         {
@@ -510,16 +510,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "What should a student do when a dimension or feature relationship remains unclear?",
+          "question": "What should a student do when a dimension or feature relationship is unclear?",
           "options": [
-            "Estimate it from the object’s appearance",
-            "Select the most convenient interpretation",
-            "Record the uncertainty and ask the teacher",
-            "Ignore the dimension during planning"
+            "Estimate it from the screen preview",
+            "Record the uncertainty and clarify it before marking or cutting",
+            "Copy a value from a different view",
+            "Choose the smallest visible number"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "Unclear drawing information must be confirmed rather than guessed or silently ignored.",
-          "incorrectFeedback": "Choose the response that preserves accuracy and allows the interpretation to be verified before production.",
+          "answerIndex": 1,
+          "correctFeedback": "Unclear drawing information must be resolved before it is used for practical work.",
+          "incorrectFeedback": "Do not assign a number to a feature until the relationship has been checked.",
           "source": "Drive file ID 1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ; NESA TE4-PPM-01"
         }
       ],
@@ -726,30 +726,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "How many design-idea spaces are provided in the Lamp Idea Iteration worksheet?",
+          "question": "Why should a designer compare several reference images before choosing a direction?",
           "options": [
-            "Six",
-            "Two",
-            "Eleven",
-            "One"
+            "To guarantee that every image can be copied",
+            "To remove the need for design criteria",
+            "To make resolution irrelevant",
+            "To avoid selecting too early and to justify later choices"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet includes spaces for six separate design ideas.",
-          "incorrectFeedback": "Distinguish the number of idea-iteration spaces from the number of image-search prompts.",
+          "answerIndex": 3,
+          "correctFeedback": "Comparing several references reveals different possibilities and provides evidence for a reasoned choice.",
+          "incorrectFeedback": "Think about how comparison improves a design decision rather than merely increasing the number of images.",
           "source": "Drive file ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8"
         },
         {
           "theoryIndex": 0,
-          "question": "How should the Gold Coast Titans example be treated?",
+          "question": "How should an example design influence a student’s own idea?",
           "options": [
-            "As the required lamp design",
-            "As the approved final image",
-            "As student example content only",
-            "As a rule requiring blue and yellow light"
+            "It can suggest strategies that are adapted into an original response",
+            "It should be copied exactly",
+            "It should be treated as the required theme",
+            "It should decide the final colours automatically"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The example demonstrates how one student might explain an idea, but it does not set a project requirement.",
-          "incorrectFeedback": "Separate an example entered in one worksheet slot from a criterion that every student must follow.",
+          "answerIndex": 0,
+          "correctFeedback": "An example can prompt thinking, but the student must develop and justify an original response.",
+          "incorrectFeedback": "Use an example as inspiration and evidence for comparison, not as a compulsory design.",
           "source": "Drive file ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8"
         },
         {
@@ -768,30 +768,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "What is the main purpose of the two-layer key-tag activity?",
+          "question": "Why is vector-design practice useful before developing a final lamp graphic?",
           "options": [
-            "To practise using a vector design program",
-            "To establish the final lamp dimensions",
-            "To approve lamp imagery",
-            "To set the lamp’s required number of layers"
+            "It proves any downloaded image can be manufactured",
+            "It supplies the lamp’s final dimensions",
+            "It develops skills with outlines, layers and simplification",
+            "It removes the need to compare ideas"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The task develops software skills through a separate key-tag exercise.",
-          "incorrectFeedback": "Identify the activity’s learning purpose and avoid transferring its product requirements to the lamp.",
+          "answerIndex": 2,
+          "correctFeedback": "Practice with outlines, layers and simple shapes builds transferable vector-design skills.",
+          "incorrectFeedback": "Focus on the design skills being developed, not on unrelated lamp specifications.",
           "source": "Drive file ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249; NESA TE4-DIG-01"
         },
         {
           "theoryIndex": 0,
-          "question": "What must be confirmed before treating an image as approved for the lamp?",
+          "question": "What should be checked before using a reference image in a design?",
           "options": [
-            "That it appears first in search results",
-            "Permission, ownership or copyright, approved imagery and selection criteria",
-            "That it has more pixels than every alternative",
-            "That it is one of the worksheet examples"
+            "Its source, reuse permission, resolution and design relevance",
+            "Only whether it looks colourful",
+            "Whether it was the first search result",
+            "Whether it already contains a finished lamp"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "These matters are not established by the worksheets and require teacher confirmation.",
-          "incorrectFeedback": "Image quality alone does not establish whether an image may be used. Consider the approval and ownership questions that remain unresolved.",
+          "answerIndex": 0,
+          "correctFeedback": "Responsible design research checks where an image came from, whether it may be reused, its quality and its relevance.",
+          "incorrectFeedback": "Choose the combination that checks both responsible use and design usefulness.",
           "source": "Drive file IDs 1VmOGpI0qTXPmWWKYMRD8ewtJcGRQB1kpf_zQNSFwppQ and 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8; NESA TE4-DIG-01"
         },
         {
@@ -810,16 +810,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "What is placed on Layer 1 in the key-tag practice?",
+          "question": "What belongs on the base layer of the two-layer practice design?",
           "options": [
-            "The exported file name",
-            "The main base outline",
-            "The laser settings",
-            "The Classroom link"
+            "Added text or small details",
+            "The main outline",
+            "A pixel-based reference image",
+            "A written evaluation"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Layer 1 contains the chosen base shape or main outline.",
-          "incorrectFeedback": "Distinguish the design’s first visual layer from later export, upload and machine information.",
+          "correctFeedback": "The base layer contains the main outline that establishes the overall shape.",
+          "incorrectFeedback": "Separate the main shape from the smaller details added on the second layer.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249"
         },
         {
@@ -840,28 +840,28 @@ window.COURSE_DATA = {
           "theoryIndex": 1,
           "question": "Why is simplicity useful in a vector design?",
           "options": [
-            "It guarantees permission to use the laser cutter",
-            "It removes the need for teacher checking",
-            "It proves the design is assessed",
-            "It makes paths easier to inspect and the intent clearer"
+            "It guarantees a perfect manufactured result",
+            "It turns a pixel image into a vector automatically",
+            "It makes paths easier to inspect, edit and understand",
+            "It makes layers unnecessary"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "Simpler designs are generally easier to check, edit and communicate.",
-          "incorrectFeedback": "Consider how design complexity affects inspection and communication, not permission or assessment status.",
+          "answerIndex": 2,
+          "correctFeedback": "Removing unnecessary detail makes the paths and intended result easier to inspect and communicate.",
+          "incorrectFeedback": "Consider how complexity affects editing, inspection and clarity.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249; NESA TE4-DES-01"
         },
         {
           "theoryIndex": 1,
-          "question": "What does the 80 mm × 50 mm limit apply to?",
+          "question": "Why should design constraints such as maximum size be checked before export?",
           "options": [
-            "The entire Programmable Lamp",
-            "The two-layer key-tag practice only",
-            "Every image found during research",
-            "The acrylic sheet used in the lamp"
+            "To guarantee every outline is closed",
+            "To select a programming language",
+            "To determine the timber species",
+            "To ensure the design fits the stated brief and avoid preventable rework"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "That size limit belongs only to the software-practice key tag.",
-          "incorrectFeedback": "Keep practice-task requirements separate from dimensions that would control the actual lamp project.",
+          "answerIndex": 3,
+          "correctFeedback": "Checking constraints before export helps ensure the design meets the brief before it moves to the next stage.",
+          "incorrectFeedback": "Choose the reason connected to meeting the design requirements, not another project area.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249"
         },
         {
@@ -880,58 +880,58 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "What does “laser-ready” mean in this section?",
+          "question": "Which features make a vector design ready for checking?",
           "options": [
-            "The student may operate the machine independently",
-            "The machine settings are confirmed",
-            "The file has been approved for production",
-            "The design is prepared for teacher checking"
+            "A large number of decorative points",
+            "A hidden base outline",
+            "An unedited pixel photograph",
+            "Clear layers, deliberate paths and readable details"
           ],
           "answerIndex": 3,
-          "correctFeedback": "The term describes the file’s readiness for review, not permission or approved machine operation.",
-          "incorrectFeedback": "Separate a clear, inspectable design file from formal approval to manufacture or use equipment.",
+          "correctFeedback": "Clear organisation and deliberate paths make the design easier to inspect before manufacturing decisions are made.",
+          "incorrectFeedback": "Look for the combination that makes the vector structure clear and intentional.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249; NESA TE4-PPM-01"
         },
         {
           "theoryIndex": 1,
-          "question": "What is the main purpose of the two-layer key-tag activity?",
+          "question": "How do layers make a vector design easier to edit?",
           "options": [
-            "To manufacture the final lamp panel",
-            "To practise using vector-design software",
-            "To establish the lamp’s production sequence",
-            "To test the lamp electronics"
+            "They convert every shape into a photograph",
+            "They lock all paths permanently",
+            "They separate the base outline from added details",
+            "They remove the need for an outline"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The activity focuses on learning the program rather than making a perfect final product.",
-          "incorrectFeedback": "Identify the learning purpose of the exercise rather than transferring it into the lamp’s manufacture or electronics.",
+          "answerIndex": 2,
+          "correctFeedback": "Separating the base and details allows each part to be inspected and changed without confusing the whole design.",
+          "incorrectFeedback": "Think about how organising different design elements supports precise editing.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249; NESA TE4-PDP-01"
         },
         {
           "theoryIndex": 1,
-          "question": "What do the image-search and lamp-iteration worksheets support?",
+          "question": "Why can a high-resolution photograph not automatically be treated as a finished vector design?",
           "options": [
-            "Reference research and development of explained ideas",
-            "Final laser settings",
-            "Exact lamp geometry",
-            "Permission to manufacture a logo"
+            "High-resolution images contain no visual detail",
+            "Resolution describes pixels, while a vector requires deliberate editable paths",
+            "Photographs always have two vector layers",
+            "Resolution fixes all manufacturing decisions"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "These worksheets support research and idea generation, not final manufacturing requirements.",
-          "incorrectFeedback": "Distinguish design-development evidence from technical instructions or approval to manufacture.",
+          "answerIndex": 1,
+          "correctFeedback": "A detailed pixel image may be useful research, but a vector design still needs clear, intentional lines and curves.",
+          "incorrectFeedback": "Separate pixel detail from the editable paths used to describe vector shapes.",
           "source": "Drive IDs 1VmOGpI0qTXPmWWKYMRD8ewtJcGRQB1kpf_zQNSFwppQ and 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8; NESA TE4-DES-01"
         },
         {
           "theoryIndex": 1,
-          "question": "Which item is not supplied by the authorised practice task?",
+          "question": "Which change best reduces unnecessary vector complexity?",
           "options": [
-            "A requirement for two clear layers",
-            "A maximum practice size",
-            "An exact export file format",
-            "A direction to export and upload the design"
+            "Removing redundant detail while keeping the form recognisable",
+            "Adding more points to every curve",
+            "Duplicating small decorative shapes",
+            "Merging the base and details without checking them"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The source instructs students to export but does not specify the required format.",
-          "incorrectFeedback": "Review which instructions are explicit and which technical details remain unstated and require confirmation.",
+          "answerIndex": 0,
+          "correctFeedback": "Removing redundant detail can make paths clearer while preserving the intended form.",
+          "incorrectFeedback": "Choose the change that simplifies the design without losing its essential idea.",
           "source": "Week 3 Drive PDF ID 1xBOBGVdnWhorJVeTTqZPw5yRNeWkF249"
         },
         {
@@ -950,30 +950,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "What should accompany each idea in the Lamp Idea Iteration worksheet?",
+          "question": "What should each design idea include to support later comparison?",
           "options": [
-            "A completed manufacturing schedule",
-            "An object, logo or item, a PNG photo and an explanation",
-            "Confirmed laser settings",
-            "A final assessment grade"
+            "A complete production schedule",
+            "A finished electronic circuit",
+            "A final product judgement",
+            "A reference or context and an explanation of its design relevance"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The worksheet asks students to identify and explain each idea, not merely insert an image.",
-          "incorrectFeedback": "Look for the three worksheet columns used to communicate each design possibility.",
+          "answerIndex": 3,
+          "correctFeedback": "An explained idea shows both what influenced it and how that influence may contribute to the lamp.",
+          "incorrectFeedback": "Look for information that makes the idea understandable and comparable.",
           "source": "Drive file ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8"
         },
         {
           "theoryIndex": 2,
-          "question": "How should the Gold Coast Titans example be treated?",
+          "question": "What is the best way to use another student’s example during idea development?",
           "options": [
-            "As the required final lamp design",
-            "As a rule requiring blue and yellow lighting",
-            "As one student example, not a project requirement",
-            "As the class-agreed success criteria"
+            "Copy its theme and colours",
+            "Identify useful strategies, then develop an original response",
+            "Treat it as the required final solution",
+            "Skip further research"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The example demonstrates one possible explanation but does not control another student’s design.",
-          "incorrectFeedback": "Separate example content entered in one idea slot from requirements that apply to the whole class.",
+          "answerIndex": 1,
+          "correctFeedback": "Examples can demonstrate a process or strategy without becoming a design requirement.",
+          "incorrectFeedback": "Use the example to extend your thinking, not to replace your own idea development.",
           "source": "Drive file ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8"
         },
         {
@@ -1062,16 +1062,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "Who confirms the final success criteria and project constraints?",
+          "question": "Why should success criteria be recorded before the final solution is evaluated?",
           "options": [
-            "Each student working alone",
-            "The first completed design idea",
-            "The image-search website",
-            "The class through discussion with the teacher"
+            "They provide a consistent basis for judging the result",
+            "They guarantee that the first design will work",
+            "They remove the need to gather evidence",
+            "They decide which idea every student must choose"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "The worksheet leaves criteria and constraints open for class agreement with teacher guidance.",
-          "incorrectFeedback": "Review how the authorised introduction worksheet says these project requirements will be established.",
+          "answerIndex": 0,
+          "correctFeedback": "Recorded criteria give the evaluation a clear and consistent standard for comparison.",
+          "incorrectFeedback": "Choose the reason that connects criteria with fair, evidence-based evaluation.",
           "source": "Drive file ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
         }
       ],
@@ -1290,16 +1290,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "What does the Timber Production worksheet establish about the better lamp-base timber group?",
+          "question": "Why is the label hardwood or softwood insufficient on its own when choosing timber?",
           "options": [
-            "Hardwood is always better",
-            "It asks students to research and justify a decision",
-            "Softwood is always better",
-            "Both groups have identical properties"
+            "Both groups always have identical properties",
+            "The label gives the exact stock dimensions",
+            "The botanical group does not prove the timber’s actual hardness, cost or suitability",
+            "The label proves the source is sustainable"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The worksheet poses the comparison question but does not supply an approved answer.",
-          "incorrectFeedback": "Distinguish a blank research question from a source that has already decided the result.",
+          "answerIndex": 2,
+          "correctFeedback": "Botanical classification is useful, but a material choice also needs evidence about the actual timber and intended function.",
+          "incorrectFeedback": "Do not treat a timber group name as proof of every property or project requirement.",
           "source": "Drive file ID 1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM"
         },
         {
@@ -1332,16 +1332,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "What remains to be confirmed for the project timber?",
+          "question": "Which evidence would strengthen a judgement about radiata pine for the lamp base?",
           "options": [
-            "Whether radiata pine is a pine",
-            "The teacher-approved stock, specification and selection rationale",
-            "Whether the project includes a lamp base",
-            "Whether timber is a material"
+            "The assumption that all softwoods are cheap",
+            "Its relevant properties, workability, appearance, availability and sustainability evidence",
+            "The name softwood by itself",
+            "A preference unrelated to the lamp’s function"
           ],
           "answerIndex": 1,
-          "correctFeedback": "The worksheet names radiata pine but does not provide these exact project details.",
-          "incorrectFeedback": "Identify the practical selection information missing from the authorised material list.",
+          "correctFeedback": "A reasoned choice links verified material evidence to the intended function of the lamp base.",
+          "incorrectFeedback": "Choose evidence about the actual material and its use, not a broad timber stereotype.",
           "source": "Drive file ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
@@ -1458,30 +1458,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "What does the Timber Production worksheet provide about the most sustainable method?",
+          "question": "Which conclusion is most defensible when comparing native-forest and plantation timber?",
           "options": [
-            "A question for students to investigate and justify",
-            "Proof that plantations are always best",
-            "Proof that native forests should never be used",
-            "A confirmed answer for the lamp project"
+            "One forest type is always sustainable",
+            "All native-forest harvesting is harmful",
+            "Sustainability depends on evidence about origin, management, regeneration and impacts",
+            "All plantation timber has no environmental effects"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet raises research questions but leaves the comparison and conclusion blank.",
-          "incorrectFeedback": "Distinguish an investigation prompt from an authorised conclusion or project decision.",
+          "answerIndex": 2,
+          "correctFeedback": "Forest type alone does not determine sustainability; management evidence and impacts must also be considered.",
+          "incorrectFeedback": "Avoid absolute claims and choose the conclusion supported by several kinds of evidence.",
           "source": "Drive file ID 1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM"
         },
         {
           "theoryIndex": 1,
-          "question": "What remains unconfirmed for the Programmable Lamp timber?",
+          "question": "Which evidence would best support a sustainable timber-sourcing decision?",
           "options": [
-            "Whether forests contain trees",
-            "Whether commercial plantations produce wood",
-            "Its actual source and the preferred sourcing decision",
-            "Whether sustainability can involve environmental effects"
+            "Origin, management, protection, regeneration and relevant impacts",
+            "A forest-type label alone",
+            "The colour of the timber",
+            "A claim that every source is equivalent"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The authorised sources do not identify where the supplied project timber was grown or sourced.",
-          "incorrectFeedback": "Identify the project-specific information that cannot be established from general forestry definitions.",
+          "answerIndex": 0,
+          "correctFeedback": "A sustainable sourcing decision needs evidence about where the timber came from and how the forest is managed over time.",
+          "incorrectFeedback": "Look beyond a single label to the evidence that explains long-term effects.",
           "source": "Drive file ID 1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM; NESA TE4-MSC-01"
         },
         {
@@ -1528,44 +1528,44 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "What should a student do when a feature or measurement is unclear?",
+          "question": "What should a student do when a production feature or measurement is unclear?",
           "options": [
-            "Choose the most convenient interpretation",
-            "Copy another student’s planned dimension",
-            "Measure the feature from the computer screen",
-            "Record the uncertainty and seek teacher confirmation"
+            "Guess from a screen image",
+            "Copy a number from an unrelated view",
+            "Add a new dimension to the drawing",
+            "Record the uncertainty and clarify it before practical work"
           ],
           "answerIndex": 3,
-          "correctFeedback": "Recording uncertainty prevents an unsupported interpretation from becoming part of the practical plan.",
-          "incorrectFeedback": "Select the response that protects accuracy without guessing, copying or measuring a potentially resized view.",
+          "correctFeedback": "Unclear information must be resolved before it is turned into a practical instruction.",
+          "incorrectFeedback": "Choose the action that keeps the plan accurate without inventing missing detail.",
           "source": "Programmable Lamp drawing, Drive ID 1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ; TE4-DES-01"
         },
         {
           "theoryIndex": 2,
-          "question": "What does the tools and materials worksheet confirm about radiata pine?",
+          "question": "Which timber must the production plan account for when planning the lamp base?",
           "options": [
-            "It is named as the project timber",
-            "Its exact stock dimensions",
-            "The tool required for every cut",
-            "Its approved surface finish"
+            "Jarrah",
+            "Blackbutt",
+            "Balsa",
+            "Radiata pine"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet identifies radiata pine but does not provide its stock size, finish or complete processing method.",
-          "incorrectFeedback": "Distinguish the naming of a material from missing details about its specification and use.",
+          "answerIndex": 3,
+          "correctFeedback": "Radiata pine is the timber identified for the Programmable Lamp base.",
+          "incorrectFeedback": "Use the named project timber rather than substituting another species.",
           "source": "Tool & Materials Identification Worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
           "theoryIndex": 2,
-          "question": "Why must tools not be assigned automatically to individual cuts?",
+          "question": "What should be matched before selecting a tool for a production step?",
           "options": [
-            "Tools cannot be listed in production plans",
-            "A named tool does not prove its use at a particular stage",
-            "Every cut must use the same tool",
-            "Students should select tools without teacher guidance"
+            "The tool colour and storage shelf",
+            "The number of photos already taken",
+            "The operation, material and required safety controls",
+            "The design theme only"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "Tool identification and tool allocation are different; the authorised source does not connect each tool to a specific cut.",
-          "incorrectFeedback": "Consider whether a general equipment list provides enough evidence for a stage-specific practical decision.",
+          "answerIndex": 2,
+          "correctFeedback": "A tool choice must suit the operation and material and be used within the required safety controls.",
+          "incorrectFeedback": "Choose the factors that determine whether the tool is suitable and safe for the task.",
           "source": "Tool & Materials Identification Worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; TE4-SAF-01"
         },
         {
@@ -1598,30 +1598,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "Why is the sawmill-order activity unsuitable as a project production sequence?",
+          "question": "How is a project production plan different from a general sawmill process?",
           "options": [
-            "Its linked video and verified order are unavailable",
-            "It contains too few timber terms",
-            "It applies only to acrylic production",
-            "It confirms every lamp construction stage"
+            "It describes only how logs become commercial timber",
+            "It translates the specific product drawing into organised making and checking steps",
+            "It ignores dimensions and checkpoints",
+            "It automatically supplies every machine setting"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "Without the identified video or an approved order, the sawmill terms cannot support an invented sequence.",
-          "incorrectFeedback": "Consider whether a list of terms alone establishes their order or connects them to lamp production.",
+          "answerIndex": 1,
+          "correctFeedback": "A project production plan is tied to the product drawing, sequence and checkpoints needed for that product.",
+          "incorrectFeedback": "Distinguish planning one product from describing the broader production of timber.",
           "source": "Timber Production worksheet, Drive ID 1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM"
         },
         {
           "theoryIndex": 2,
-          "question": "What is the correct status of a student production plan before teacher approval?",
+          "question": "What makes a production plan useful before work begins?",
           "options": [
-            "A complete workshop procedure",
-            "A proposed sequence supported by available evidence",
-            "Permission to begin using equipment",
-            "A replacement for teacher demonstration"
+            "It organises drawing evidence, a proposed sequence, checkpoints and unresolved details",
+            "It permits every machine to be used",
+            "It replaces all safe operating procedures",
+            "It turns estimates into exact dimensions"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The plan organises confirmed information but remains subject to teacher checking, demonstration and authorisation.",
-          "incorrectFeedback": "Distinguish planning evidence from practical permission and authorised workshop instruction.",
+          "answerIndex": 0,
+          "correctFeedback": "A useful plan organises what is known and clearly identifies what still needs clarification.",
+          "incorrectFeedback": "Choose the purpose of planning rather than treating the plan as permission or a substitute for safety controls.",
           "source": "Programmable Lamp drawing, Drive ID 1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ; TE4-PPM-01 and TE4-SAF-01"
         }
       ],
@@ -1857,30 +1857,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 0,
-          "question": "What should happen before the lamp algorithm is translated into code?",
+          "question": "What information is needed before an algorithm can be translated into working code?",
           "options": [
-            "Students should select their own pin numbers",
-            "The teacher should confirm the language and hardware configuration",
-            "The RGB strip should be connected by trial and error",
-            "A library should be chosen from memory"
+            "The timber’s botanical group",
+            "The programming language’s syntax and the hardware configuration",
+            "The image resolution",
+            "The lamp’s final evaluation"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Translation should follow confirmed project information rather than assumptions about code or hardware.",
-          "incorrectFeedback": "Choose the step that verifies the technical basis before language-specific instructions are produced.",
+          "correctFeedback": "Working code depends on the rules of the selected language and the system it must control.",
+          "incorrectFeedback": "Identify the technical information needed to turn human-readable steps into executable instructions.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; TE4-DIG-02"
         },
         {
           "theoryIndex": 0,
-          "question": "What does the tools and materials worksheet prove about the Arduino Uno and RGB LED strip?",
+          "question": "A set of correct actions has been placed in a confusing order. Which coding concept needs improvement?",
           "options": [
-            "They are named project components",
-            "Their exact circuit is supplied",
-            "Their programming language is confirmed",
-            "Their pin assignments are approved"
+            "Resolution",
+            "Sustainability",
+            "Sequencing",
+            "Material classification"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "The worksheet identifies the components but does not establish how they connect or are programmed.",
-          "incorrectFeedback": "Distinguish naming hardware from providing its complete technical configuration.",
+          "answerIndex": 2,
+          "correctFeedback": "Sequencing arranges instructions in the order needed to produce the intended result.",
+          "incorrectFeedback": "Focus on the coding concept concerned with what happens first, next and last.",
           "source": "Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
@@ -1955,16 +1955,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "Which project detail is not confirmed by the supplied sources?",
+          "question": "A value representing the current light state may change while a program runs. Which concept represents that changing information?",
           "options": [
-            "The project integrates code, electronics, light and design",
-            "An Arduino Uno is a named component",
-            "The exact values to be stored in variables",
-            "An RGB LED strip is a named component"
+            "A loop",
+            "A conditional",
+            "A vector path",
+            "A variable"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The sources establish the project context and named components but do not provide variable values or code settings.",
-          "incorrectFeedback": "Identify which option moves beyond naming the project areas and components into unconfirmed programming detail.",
+          "answerIndex": 3,
+          "correctFeedback": "A variable represents information that may change while a program operates.",
+          "incorrectFeedback": "Choose the concept used to hold changing information, not repeat or select actions.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
@@ -1983,58 +1983,58 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "What must be confirmed before a conceptual conditional becomes project code?",
+          "question": "What must a conditional identify?",
           "options": [
-            "Only the lamp’s appearance",
-            "The condition, input, language and hardware configuration",
-            "The timber’s botanical group",
-            "The drawing’s printed scale only"
+            "A condition and the action selected when it is met or not met",
+            "Only a repeated action",
+            "A timber species and grain pattern",
+            "A vector outline and layer name"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "A working conditional depends on confirmed technical information that is not provided by the current sources.",
-          "incorrectFeedback": "Consider which missing details determine how a digital system receives information and makes a programmed choice.",
+          "answerIndex": 0,
+          "correctFeedback": "A conditional makes a choice by testing a condition and selecting the corresponding action.",
+          "incorrectFeedback": "Look for the structure that connects a test with alternative actions.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; TE4-DIG-02"
         },
         {
           "theoryIndex": 1,
-          "question": "How does the official Arduino reference broadly organise its language information?",
+          "question": "What is the purpose of a stopping rule in a loop?",
           "options": [
-            "Drawings, materials and machines",
-            "Circuits, voltages and sensors",
-            "Functions, values, and structure",
-            "Timber, acrylic and electronics"
+            "To store changing information",
+            "To choose the timber source",
+            "To define when repetition should end",
+            "To organise vector layers"
           ],
           "answerIndex": 2,
-          "correctFeedback": "The Arduino reference groups language information into functions, values including variables and constants, and structure.",
-          "incorrectFeedback": "Look for the official language-reference categories rather than project components or unconfirmed circuit information.",
+          "correctFeedback": "A stopping rule controls when repeated actions finish instead of continuing indefinitely.",
+          "incorrectFeedback": "Separate the control of repetition from variables and unrelated project decisions.",
           "source": "Official Arduino Language Reference"
         },
         {
           "theoryIndex": 1,
-          "question": "What should students do before translating planned light behaviour into code?",
+          "question": "Before coding a light behaviour, what should the algorithm identify?",
           "options": [
-            "Select values and timings independently",
-            "Invent an input device",
-            "Connect components by trial and error",
-            "Describe the intended behaviour and obtain teacher confirmation"
+            "Only the final appearance",
+            "The forest-management method",
+            "Every machine setting",
+            "What information may change, what actions may repeat and what decisions are required"
           ],
           "answerIndex": 3,
-          "correctFeedback": "Language-neutral planning allows the intended behaviour to be reviewed before technical details are added.",
-          "incorrectFeedback": "Select the process that communicates the design clearly without relying on invented settings or hardware.",
+          "correctFeedback": "A language-neutral plan should identify the changing information, repetition and decisions that shape the intended behaviour.",
+          "incorrectFeedback": "Choose the description that plans the behaviour before language-specific code is written.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-DES-01 and TE4-DIG-02"
         },
         {
           "theoryIndex": 1,
-          "question": "Which statement correctly describes the coding worksheet evidence?",
+          "question": "Which combination correctly matches each coding concept with its purpose?",
           "options": [
-            "It provides the project’s approved loop and conditional rules",
-            "It confirms variable, loop and conditional as topics for investigation",
-            "It supplies a complete Arduino program",
-            "It identifies the RGB strip type and input device"
+            "Variable—repeats actions; loop—selects a timber; conditional—draws vectors",
+            "Variable—stores changing information; loop—repeats actions; conditional—selects an action",
+            "Variable—controls layers; loop—stores images; conditional—measures timber",
+            "Variable—selects an action; loop—stores changing information; conditional—always repeats"
           ],
           "answerIndex": 1,
-          "correctFeedback": "The worksheet names the concepts but leaves the research spaces blank and supplies no project-specific implementation.",
-          "incorrectFeedback": "Distinguish topic intent from completed definitions, code or technical configuration.",
+          "correctFeedback": "Variables represent information, loops control repetition and conditionals make choices.",
+          "incorrectFeedback": "Check the distinct purpose of each concept rather than swapping their roles.",
           "source": "What is coding worksheet, Drive ID 1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k"
         },
         {
@@ -2095,58 +2095,58 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "How should information flow be described from the supplied evidence?",
+          "question": "Which sequence best represents the lamp system’s information flow?",
           "options": [
-            "Instructions are processed by the controller to influence the light output",
-            "The light output writes the code",
-            "The USB cable chooses the light behaviour",
-            "Jumper wires act as the controller"
+            "Planned instructions → controller → light output",
+            "Light output → timber → instructions",
+            "Jumper wires → design theme → controller",
+            "Acrylic → syntax → USB cable"
           ],
           "answerIndex": 0,
-          "correctFeedback": "This description explains the confirmed system roles without inventing technical configuration details.",
-          "incorrectFeedback": "Follow the conceptual path from planned behaviour to processing and then to visible output.",
+          "correctFeedback": "The planned instructions are processed by the controller, which influences the light output.",
+          "incorrectFeedback": "Follow the information from intended behaviour to processing and then visible output.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; What is coding worksheet, Drive ID 1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k; TE4-DIG-02"
         },
         {
           "theoryIndex": 2,
-          "question": "What do the USB cable and jumper wires confirm?",
+          "question": "Why are connector names alone insufficient for assembling a working circuit?",
           "options": [
-            "The exact pin arrangement",
-            "That supporting connection materials are named",
-            "The required voltage",
-            "The approved power arrangement"
+            "They automatically select the program",
+            "They do not specify the exact role, arrangement or electrical configuration",
+            "They define the vector design",
+            "They prove the circuit has been tested"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Their inclusion confirms project materials, but not their exact connection, electrical role or arrangement.",
-          "incorrectFeedback": "Distinguish a component list from a complete circuit or technical specification.",
+          "correctFeedback": "A component name does not provide the complete connection and configuration information needed for assembly.",
+          "incorrectFeedback": "Distinguish identifying a part from explaining exactly how it is connected and used.",
           "source": "Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
           "theoryIndex": 2,
-          "question": "Which block diagram is appropriate at this stage?",
+          "question": "What is the main purpose of a block diagram?",
           "options": [
-            "Confirmed control/input — controller — light output",
-            "Sensor — switch — exact pin — voltage",
-            "Library — circuit — assessment result",
-            "Timber — acrylic — laser setting"
+            "To provide exact pin connections",
+            "To list timber-production steps",
+            "To show system roles and relationships without full wiring detail",
+            "To calculate image resolution"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "This neutral diagram communicates system roles while leaving the unconfirmed control method open.",
-          "incorrectFeedback": "Choose the diagram that avoids invented devices, electrical details and unrelated project information.",
+          "answerIndex": 2,
+          "correctFeedback": "A block diagram communicates how the main parts of a system relate at a conceptual level.",
+          "incorrectFeedback": "Choose the diagram purpose concerned with roles and information flow, not detailed construction.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-DES-01"
         },
         {
           "theoryIndex": 2,
-          "question": "Why must the first block in the diagram remain Teacher to confirm?",
+          "question": "An input device has not yet been chosen. How should it appear on an early block diagram?",
           "options": [
-            "The controller is not named",
-            "The light output is not named",
-            "No control or input method is supplied",
-            "The project does not include code"
+            "As a specific sensor selected by guesswork",
+            "As the light output",
+            "As a timber component",
+            "As a generic input or control block"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "The sources do not identify a sensor, switch, user input or other confirmed control method.",
-          "incorrectFeedback": "Look for the system role that remains unsupported by the supplied project evidence.",
+          "answerIndex": 3,
+          "correctFeedback": "A generic input or control label communicates the required role without inventing a device.",
+          "incorrectFeedback": "Show what the system needs while leaving an undecided physical component unspecified.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
@@ -2165,16 +2165,16 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "Which project detail remains unconfirmed?",
+          "question": "How does a circuit diagram differ from a conceptual block diagram?",
           "options": [
-            "The project integrates code, electronics, light and design",
-            "An Arduino Uno is named",
-            "An RGB LED strip is named",
-            "The exact circuit and control configuration"
+            "It adds the specific electrical connections and arrangement",
+            "It removes all component relationships",
+            "It shows only the product’s appearance",
+            "It replaces the algorithm"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "The sources identify the system idea and components but do not provide their technical arrangement.",
-          "incorrectFeedback": "Identify which option moves beyond confirmed project roles and materials into missing configuration details.",
+          "answerIndex": 0,
+          "correctFeedback": "A circuit diagram requires electrical detail, while a block diagram can show roles and relationships more generally.",
+          "incorrectFeedback": "Focus on the extra connection detail needed to move from a concept to a circuit.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         }
       ],
@@ -2402,14 +2402,14 @@ window.COURSE_DATA = {
           "theoryIndex": 0,
           "question": "What is an interface?",
           "options": [
-            "A final assessment result",
-            "A named programming language",
-            "A complete production schedule",
-            "A point where two parts meet or interact"
+            "A list of materials with no relationships",
+            "A point where two parts meet or interact",
+            "A sequence of code with no output",
+            "A decoration unrelated to function"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "Interfaces are relationships between parts that need checking during integration.",
-          "incorrectFeedback": "Look for the concept describing interaction between parts rather than a document, language or schedule.",
+          "answerIndex": 1,
+          "correctFeedback": "An interface is a relationship between parts that must work together in the integrated solution.",
+          "incorrectFeedback": "Look for the concept describing where parts connect, meet or influence one another.",
           "source": "TE4-MSC-01 and TE4-DES-01; Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
         },
         {
@@ -2430,28 +2430,28 @@ window.COURSE_DATA = {
           "theoryIndex": 0,
           "question": "What makes design communication traceable?",
           "options": [
-            "Linking decisions to drawings, worksheets and confirmed components",
             "Recording only the final idea",
-            "Removing all notes about uncertainty",
-            "Treating assumptions as approved facts"
+            "Removing notes about uncertainty",
+            "Treating assumptions as facts",
+            "Linking each decision to relevant evidence such as drawings, tests and design records"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "Traceable communication shows where a decision came from and which evidence supports it.",
-          "incorrectFeedback": "Focus on recording the evidence behind a decision rather than presenting unsupported certainty.",
+          "answerIndex": 3,
+          "correctFeedback": "Traceable communication shows the evidence and reasoning behind each design decision.",
+          "incorrectFeedback": "Choose the approach that lets another person follow where a decision came from.",
           "source": "Lamp Idea Iteration, Drive ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8; Programmable Lamp drawing, Drive ID 1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ; TE4-DES-01"
         },
         {
           "theoryIndex": 0,
-          "question": "Which detail remains unconfirmed?",
+          "question": "Why should interfaces be checked before final assembly?",
           "options": [
-            "Radiata pine is named",
-            "Clear acrylic is named",
-            "The Arduino Uno and RGB LED strip are named",
-            "The exact connections, fit and component arrangement"
+            "Every interface is automatically compatible",
+            "Interfaces concern appearance only",
+            "A mismatch between parts can affect fit, function and the complete solution",
+            "Checking one part proves all other parts will work"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "The sources name the main areas and components but do not provide their complete physical or electronic configuration.",
-          "incorrectFeedback": "Identify which option moves beyond confirmed component names into missing integration details.",
+          "answerIndex": 2,
+          "correctFeedback": "Checking interfaces helps find compatibility problems before separate parts are treated as one finished system.",
+          "incorrectFeedback": "Think about how a problem where parts meet can affect the whole solution.",
           "source": "Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; Programmable Lamp drawing, Drive ID 1I5PiH8vw7PerhH0PgMeWYkltm6z1rVNZ"
         },
         {
@@ -2474,26 +2474,26 @@ window.COURSE_DATA = {
           "options": [
             "A systematic process of locating, explaining and correcting a fault",
             "Replacing every component at once",
-            "Writing a final assessment judgement",
+            "Changing several settings without recording them",
             "Selecting the lamp’s materials"
           ],
           "answerIndex": 0,
-          "correctFeedback": "Debugging uses an organised investigation rather than random changes or unsupported conclusions.",
-          "incorrectFeedback": "Focus on the process used to investigate why a digital system or plan does not match expectations.",
+          "correctFeedback": "Debugging uses an organised investigation rather than random changes.",
+          "incorrectFeedback": "Focus on the process used to explain why a system does not match expectations and correct it.",
           "source": "What is coding worksheet, Drive ID 1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k; TE4-DIG-02"
         },
         {
           "theoryIndex": 1,
           "question": "What should be stated before beginning a test?",
           "options": [
-            "An invented fault symptom",
-            "A preferred repair method",
-            "The confirmed criterion",
-            "The final assessment grade"
+            "A guessed fault",
+            "A preferred repair",
+            "The criterion being tested",
+            "A vague description such as ‘good’"
           ],
           "answerIndex": 2,
-          "correctFeedback": "A confirmed criterion provides the standard against which the observed result will be compared.",
-          "incorrectFeedback": "Identify the information needed to decide whether an observed result is acceptable or requires further investigation.",
+          "correctFeedback": "The criterion provides the standard against which the observed result will be compared.",
+          "incorrectFeedback": "Identify the information needed to decide whether the test result meets the intended requirement.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-PPM-01"
         },
         {
@@ -2526,44 +2526,44 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "What is the purpose of the diagnostic headings?",
+          "question": "Why group possible faults into areas such as design/material, connection/component and code/logic?",
           "options": [
-            "To confirm the exact fault immediately",
-            "To organise possible areas for investigation",
-            "To provide the approved repair procedure",
-            "To identify the project’s circuit settings"
+            "To organise a systematic investigation",
+            "To prove the cause before testing",
+            "To justify changing every part at once",
+            "To avoid recording observations"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The headings help structure investigation but do not prove which area caused the unexpected result.",
-          "incorrectFeedback": "Separate a way of organising possible causes from evidence that confirms one particular fault.",
+          "answerIndex": 0,
+          "correctFeedback": "Diagnostic groups help organise possible causes so they can be investigated methodically.",
+          "incorrectFeedback": "The groups guide the investigation; they do not prove a cause by themselves.",
           "source": "Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; What is coding worksheet, Drive ID 1aEDElMGsxxIcAo-rCDUe49_leQwztNNdOh2PIEp_e2k"
         },
         {
           "theoryIndex": 1,
           "question": "Why should only one controlled element be changed at a time?",
           "options": [
+            "It guarantees every fault is fixed",
             "It helps show whether that change affected the result",
-            "It guarantees that every fault is fixed",
-            "It removes the need for teacher approval",
-            "It confirms all technical settings"
+            "It makes observations unnecessary",
+            "It proves all settings are correct"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "Controlling the change makes the relationship between the adjustment and the new result easier to evaluate.",
-          "incorrectFeedback": "Consider what happens to cause-and-effect evidence when several elements are altered together.",
+          "answerIndex": 1,
+          "correctFeedback": "A single controlled change makes cause-and-effect evidence easier to interpret.",
+          "incorrectFeedback": "Consider what happens to the evidence when several elements change together.",
           "source": "Lamp Idea Iteration, Drive ID 1OmW9UvXZ44MtOGNVmq7THl65bglDtKBwJ4exdkAqWF8; TE4-PPM-01"
         },
         {
           "theoryIndex": 1,
-          "question": "What should happen after an approved controlled change?",
+          "question": "What should happen after one controlled element is changed?",
           "options": [
-            "The test record should be discarded",
-            "A different criterion should be invented",
-            "The same aspect should be retested",
-            "Several more elements should be changed immediately"
+            "Discard the earlier record",
+            "Change several more elements immediately",
+            "Replace the original criterion",
+            "Retest the same aspect and compare the result"
           ],
-          "answerIndex": 2,
-          "correctFeedback": "Retesting the same aspect allows the revised result to be compared fairly with the earlier evidence.",
-          "incorrectFeedback": "Choose the step that checks whether the approved change affected the original result.",
+          "answerIndex": 3,
+          "correctFeedback": "Retesting the same aspect allows a fair comparison with the earlier evidence.",
+          "incorrectFeedback": "Choose the step that checks whether the single change affected the original result.",
           "source": "TE4-PPM-01 and TE4-DES-01"
         },
         {
@@ -2582,44 +2582,44 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 1,
-          "question": "Which detail remains Teacher to confirm?",
+          "question": "Which sequence best represents controlled debugging?",
           "options": [
-            "Testing involves comparing evidence with criteria",
-            "Debugging should be systematic",
-            "Changes should be documented",
-            "Exact criteria, safe procedures and technical settings"
+            "Predict → test → record → compare → change one element → retest",
+            "Change everything → observe once → stop",
+            "Guess → replace parts → discard notes",
+            "Test without a criterion → choose a preferred result"
           ],
-          "answerIndex": 3,
-          "correctFeedback": "The sources support the general testing process but do not provide these project-specific requirements.",
-          "incorrectFeedback": "Identify the option involving practical and technical details absent from the authorised evidence.",
+          "answerIndex": 0,
+          "correctFeedback": "Controlled debugging records evidence, isolates one change and retests against the same expectation.",
+          "incorrectFeedback": "Choose the sequence that supports a traceable cause-and-effect investigation.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg"
         },
         {
           "theoryIndex": 2,
           "question": "What is evaluation?",
           "options": [
-            "A reasoned judgement based on criteria and evidence",
-            "A statement that the project is complete",
-            "A list of all named materials",
-            "A final assessment mark"
+            "A statement that the project is finished",
+            "A list of materials without explanation",
+            "A personal preference with no comparison",
+            "A reasoned judgement based on criteria and evidence"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "Evaluation explains a judgement by connecting recorded evidence with a confirmed expectation.",
-          "incorrectFeedback": "Look for the option that requires both a standard for comparison and evidence supporting the judgement.",
+          "answerIndex": 3,
+          "correctFeedback": "Evaluation connects a judgement with relevant evidence and a clear basis for comparison.",
+          "incorrectFeedback": "Look for the option that requires both evidence and reasoning.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-DES-01"
         },
         {
           "theoryIndex": 2,
           "question": "What does fitness for purpose consider?",
           "options": [
-            "Whether the product receives a high mark",
-            "Whether evidence shows the solution meets its confirmed purpose and criteria",
-            "Whether plantation timber was used",
-            "Whether every design idea was manufactured"
+            "Whether every design idea was manufactured",
+            "Whether the solution performs its intended purpose and meets relevant criteria",
+            "Whether the product uses the most materials",
+            "Whether the appearance matches another student’s work"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Fitness for purpose is judged by comparing the solution’s performance with confirmed expectations.",
-          "incorrectFeedback": "Focus on whether the solution performs as intended rather than on marks, sourcing or idea quantity.",
+          "correctFeedback": "Fitness for purpose is judged by comparing the solution’s performance with its intended purpose and criteria.",
+          "incorrectFeedback": "Focus on how well the solution performs, not on quantity, imitation or unrelated features.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-DES-01"
         },
         {
@@ -2666,30 +2666,30 @@ window.COURSE_DATA = {
         },
         {
           "theoryIndex": 2,
-          "question": "What does the project evidence confirm about the supplied timber’s sourcing?",
+          "question": "Which evidence would strengthen a sustainability judgement about the project timber?",
           "options": [
-            "It is certified plantation timber",
-            "Its actual origin and certification are not supplied",
-            "It comes from a native forest",
-            "It has no environmental impacts"
+            "Its colour alone",
+            "The word pine by itself",
+            "Its origin, management, regeneration and life-cycle impacts",
+            "An assumption that all plantations are identical"
           ],
-          "answerIndex": 1,
-          "correctFeedback": "The sources name radiata pine but do not identify its origin, certification or full life-cycle evidence.",
-          "incorrectFeedback": "Separate the named timber species from missing information about where and how it was produced.",
+          "answerIndex": 2,
+          "correctFeedback": "A strong sustainability judgement needs evidence about sourcing and effects over time.",
+          "incorrectFeedback": "Choose evidence that explains how the timber was produced and managed, not a label or appearance.",
           "source": "Tools and Materials worksheet, Drive ID 1UnXP8FYDHNQsgOaRS036CZhLTCW9UXeoZC56gJbL2Tg; Timber Production worksheet, Drive ID 1dTRa-pimCafVnV_V7H0I16M_8Wn32-b7C_4NIXbfmaM"
         },
         {
           "theoryIndex": 2,
           "question": "What should a learning evaluation compare?",
           "options": [
-            "The student’s evidence with their personal goal",
             "The lamp with an unrelated product",
+            "One student’s progress with another student’s result",
             "The timber source with a coding algorithm",
-            "The final mark with another student’s mark"
+            "The student’s evidence with their personal goal"
           ],
-          "answerIndex": 0,
-          "correctFeedback": "A learning evaluation examines progress, improvement needs and a next step against the student’s own goal.",
-          "incorrectFeedback": "Look for the comparison focused on the student’s development rather than unrelated products or marks.",
+          "answerIndex": 3,
+          "correctFeedback": "A learning evaluation uses evidence to judge progress against the student’s own goal and identify a next step.",
+          "incorrectFeedback": "Choose the comparison focused on personal development rather than unrelated work.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE"
         },
         {
@@ -2710,14 +2710,14 @@ window.COURSE_DATA = {
           "theoryIndex": 2,
           "question": "What does the reasoning part of claim-evidence-reasoning do?",
           "options": [
-            "Lists every material in the project",
+            "Lists every material",
             "Explains why the evidence supports the claim",
             "Replaces the need for evidence",
-            "Provides an assessment mark"
+            "States a preference without justification"
           ],
           "answerIndex": 1,
-          "correctFeedback": "Reasoning makes the connection between the recorded evidence and the judgement being presented.",
-          "incorrectFeedback": "Identify the part that explains the link rather than stating the judgement or listing observations.",
+          "correctFeedback": "Reasoning explains the connection between the evidence and the judgement being made.",
+          "incorrectFeedback": "Identify the part that makes the logic behind the claim clear.",
           "source": "Unit Introduction and Success Criteria, Drive ID 1jABRQJb5uYOOPLWW-AG-mXDa3QEmGsUhoexCptn2aPE; TE4-DES-01"
         },
         {
