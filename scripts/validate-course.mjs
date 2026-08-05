@@ -6,6 +6,14 @@ import vm from "node:vm";
 const repo = path.resolve(import.meta.dirname, "..");
 const read = (file) => fs.readFileSync(path.join(repo, file), "utf8");
 const must = (condition, message) => { if (!condition) throw new Error(message); };
+const visibleHtmlText = (html) => html
+  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+  .replace(/<[^>]+>/g, " ")
+  .replaceAll("&amp;", "&")
+  .replaceAll("&nbsp;", " ")
+  .replace(/\s+/g, " ")
+  .trim();
 
 const textExtensions = new Set([".html", ".js", ".mjs", ".css", ".md", ".json", ".txt"]);
 const stalePatterns = [
@@ -211,34 +219,48 @@ must(folio.includes("80 mm × 50 mm") && folio.includes("only to the key-tag pra
 
 const teacherHandoff = JSON.parse(read("source-notes/TEACHER-PROGRAMME-HANDOFF.json"));
 const teacherPage = read("teacher-resources.html");
-must(teacherHandoff.modules?.length === 5 && teacherHandoff.modules.flatMap((module) => module.sections).length === 15, "Teacher programme must preserve five modules and 15 named theory sections.");
-must(teacherHandoff.teacher_to_confirm_register?.length === 23, "Teacher programme must preserve all 23 Teacher to confirm records.");
-must(teacherHandoff.resource_register?.length === 16, "Teacher programme must preserve all 16 source/resource records.");
-must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.knowledge_checks, 0) === 150, "Teacher programme evidence totals must preserve 150 checks.");
-must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.written_responses, 0) === 30, "Teacher programme evidence totals must preserve 30 written responses.");
-must(teacherPage.includes("Teacher-developed programme for local review") && teacherPage.includes("Not NESA approved"), "Teacher page must show the required development and approval labels.");
+const teacherVisibleText = visibleHtmlText(teacherPage);
+must(teacherHandoff.modules?.length === 5 && teacherHandoff.modules.flatMap((module) => module.sections).length === 15, "Teacher program must preserve five modules and 15 named theory sections.");
+must(teacherHandoff.teacher_to_confirm_register?.length === 23, "Teacher program must preserve all 23 Teacher to confirm records.");
+must(teacherHandoff.resource_register?.length === 16, "Teacher program must preserve all 16 source/resource records.");
+must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.knowledge_checks, 0) === 150, "Teacher program evidence totals must preserve 150 checks.");
+must(teacherHandoff.modules.reduce((total, module) => total + module.evidence.written_responses, 0) === 30, "Teacher program evidence totals must preserve 30 written responses.");
+must(teacherPage.includes("Teacher-developed program for local review") && teacherPage.includes("Not NESA approved"), "Teacher page must show the required development and approval labels.");
+must(teacherPage.includes("<title>Teacher program &amp; scope and sequence | Programmable Light</title>") && teacherPage.includes("<h1>Teacher program &amp; scope and sequence</h1>"), "Teacher page title and heading must use program.");
 must(teacherPage.includes('onclick="window.print()"') && teacherPage.includes(">Print / Save PDF</button>"), "Teacher page must provide Print / Save PDF.");
 must((teacherPage.match(/class="teacher-module__heading"/g) || []).length === 5 && teacherPage.includes('class="teacher-module cross-module"'), "Teacher page must render five module records plus the cross-module evidence record.");
 must((teacherPage.match(/class="confirm-record"/g) || []).length === 23, "Teacher page must render all 23 Teacher to confirm records.");
 must((teacherPage.match(/class="resource-record"/g) || []).length === 16, "Teacher page must render all 16 resource records.");
+must((teacherPage.match(/<strong>Source access<\/strong>/g) || []).length === 16, "Teacher page must preserve source access for every resource record.");
+must((teacherPage.match(/class="external-source drive-source"/g) || []).length >= 16, "Teacher page must identify Drive links so print output can suppress raw ID-bearing URLs.");
+must(read("guided/course.css").includes('.drive-source::after { content: none; }'), "Print CSS must suppress raw Drive URLs and IDs.");
+must(!teacherPage.includes("Source IDs") && !teacherPage.includes("ID and route") && !teacherPage.includes("source-id-list"), "Teacher page must not render internal source-ID sections or chips.");
+must(!/\bprogramme\b/i.test(teacherVisibleText), "Teacher page contains a user-facing occurrence of programme.");
 must((teacherPage.match(/Teacher to confirm/g) || []).length >= 80, "Teacher page does not visibly preserve its local-decision boundaries.");
 teacherHandoff.modules.flatMap((module) => module.sections).forEach((record) => must(teacherPage.includes(`<strong>${record.id}</strong> ${record.title}`), `Teacher page is missing theory record ${record.id}.`));
+const rawSourceIds = new Set([
+  teacherHandoff.source_authority.authorised_drive_root.id,
+  ...teacherHandoff.modules.flatMap((module) => module.source_ids),
+  ...teacherHandoff.resource_register.map((record) => record.id).filter(Boolean)
+]);
+rawSourceIds.forEach((id) => must(!teacherVisibleText.includes(id), `Teacher page visibly exposes internal source ID ${id}.`));
 teacherHandoff.resource_register.forEach((record) => {
-  if (record.id) must(teacherPage.includes(record.id), `Teacher page is missing source ID ${record.id}.`);
+  must(teacherVisibleText.includes(record.resource), `Teacher page is missing source reference ${record.resource}.`);
   if (record.local_route) {
     must(teacherPage.includes(`href="${record.local_route}"`), `Teacher page is missing local route ${record.local_route}.`);
     must(fs.existsSync(path.join(repo, record.local_route)), `Teacher resource route does not resolve: ${record.local_route}.`);
   }
 });
-must(!/NESA approved programme|approved by NESA/i.test(teacherPage), "Teacher page contains a false NESA approval claim.");
+must(!/NESA approved program|approved by NESA/i.test(teacherVisibleText), "Teacher page contains a false NESA approval claim.");
 must(!/Weeks?\s*(?:4|5|6|7|8|9|10)[^<]{0,80}(?:cut|assemble|wire|solder|laser|machine)/i.test(teacherPage), "Teacher page appears to invent a Weeks 4-10 practical sequence.");
 
 const indexPage = read("index.html");
-must(indexPage.includes('<a href="teacher-resources.html">Teacher programme</a>'), "Landing navigation is missing the exact Teacher programme link.");
-must(/<a href="#outcomes">Outcomes<\/a><a href="teacher-resources\.html">Teacher programme<\/a>/.test(indexPage), "Teacher programme must follow Outcomes in the landing navigation.");
-must(indexPage.includes('<a class="module-link" href="teacher-resources.html">Open teacher programme &amp; scope and sequence →</a>'), "Landing page is missing the exact teacher programme call to action.");
+must(indexPage.includes('<a href="teacher-resources.html">Teacher program</a>'), "Landing navigation is missing the exact Teacher program link.");
+must(/<a href="#outcomes">Outcomes<\/a><a href="teacher-resources\.html">Teacher program<\/a>/.test(indexPage), "Teacher program must follow Outcomes in the landing navigation.");
+must(indexPage.includes('<a class="module-link" href="teacher-resources.html">Open teacher program &amp; scope and sequence →</a>'), "Landing page is missing the exact teacher program call to action.");
 must(indexPage.indexOf('id="sources"') < indexPage.indexOf('id="teacher-resources"'), "Teacher Resources section must follow the authorised source library.");
-for (const file of ["module.html", "folio.html"]) must(read(file).includes('<a href="teacher-resources.html">Teacher programme</a>'), `${file} footer is missing the Teacher programme link.`);
+for (const file of ["module.html", "folio.html"]) must(read(file).includes('<a href="teacher-resources.html">Teacher program</a>'), `${file} footer is missing the Teacher program link.`);
+for (const file of ["index.html", "module.html", "folio.html", "teacher-resources.html"]) must(!/\bprogramme\b/i.test(visibleHtmlText(read(file))), `${file} contains a user-facing occurrence of programme.`);
 
 const courseScript = read("guided/course.js");
 must(courseScript.includes("zoomable-infographic"), "Teaching visuals must provide enlarged-image links.");

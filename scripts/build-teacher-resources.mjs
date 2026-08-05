@@ -6,7 +6,11 @@ const sourcePath = path.join(repo, "source-notes", "TEACHER-PROGRAMME-HANDOFF.js
 const outputPath = path.join(repo, "teacher-resources.html");
 const data = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
 
-const esc = (value = "") => String(value)
+const publicWording = (value = "") => String(value)
+  .replaceAll("Programme", "Program")
+  .replaceAll("programme", "program");
+
+const esc = (value = "") => publicWording(value)
   .replaceAll("&", "&amp;")
   .replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;")
@@ -23,11 +27,11 @@ const definitionList = (records) => `<dl class="record-list">${records.map(([lab
 const section = (id, eyebrow, title, body) => `<section class="teacher-section" id="${id}"><p class="eyebrow">${esc(eyebrow)}</p><h2>${esc(title)}</h2>${body}</section>`;
 
 const documentControl = definitionList([
-  ["Programme type", data.course_identity.programme_type],
+  ["Program type", data.course_identity.programme_type],
   ["Version", data.document_control.version],
   ["Prepared", data.document_control.prepared_date],
   ["Evidence cut-off", data.document_control.evidence_cutoff],
-  ["Programme owner", data.document_control.programme_owner],
+  ["Program owner", data.document_control.programme_owner],
   ["School/faculty", data.document_control.school_faculty],
   ["Class/year group", data.document_control.class_year_group],
   ["Indicative duration", data.document_control.duration_boundary],
@@ -60,7 +64,6 @@ const moduleCards = data.modules.map((module) => {
       <div><h4>Source-grounded content</h4>${list(module.content)}</div>
       <div><h4>Evidence available</h4><ul><li>${evidence.knowledge_checks} knowledge checks</li><li>${evidence.written_responses} scaffolded written responses</li><li>Folio Cards ${evidence.folio_cards.join(", ")}</li>${evidence.external_dependency ? `<li>${mark(evidence.external_dependency)}</li>` : ""}</ul></div>
       <div><h4>Outcome opportunities</h4><p>${module.outcome_opportunities.map(esc).join(", ")}</p><h4>Focus-area opportunities</h4><p>${module.focus_area_opportunities.map(esc).join("; ")}</p></div>
-      <div><h4>Source IDs</h4><p class="source-id-list">${module.source_ids.map((id) => `<code>${esc(id)}</code>`).join(" ")}</p></div>
     </div>
     <div class="teacher-boundary"><strong>Boundaries and dependencies</strong>${list(module.boundaries)}</div>
   </article>`;
@@ -75,8 +78,11 @@ const resourceHref = (item) => {
 
 const resourceCards = data.resource_register.map((item) => {
   const href = resourceHref(item);
-  const sourceCell = item.id ? `<code>${esc(item.id)}</code>${href ? `<br><a class="external-source" href="${esc(href)}" target="_blank" rel="noopener">Open Drive source ↗</a>` : ""}${item.local_route ? `<br><a class="external-source" href="${esc(item.local_route)}" target="_blank" rel="noopener">Open local course copy ↗</a>` : ""}` : "Not applicable";
-  return `<article class="resource-record"><h3>${esc(item.resource)}</h3><p><strong>ID and route</strong><br>${sourceCell}</p><p><strong>Role</strong><br>${mark(item.role || "Source-supported course resource")}</p><p><strong>Boundary</strong><br>${mark(item.boundary)}</p></article>`;
+  const sourceLinks = [
+    href ? `<a class="external-source drive-source" href="${esc(href)}" target="_blank" rel="noopener">Open Drive source ↗</a>` : "",
+    item.local_route ? `<a class="external-source" href="${esc(item.local_route)}" target="_blank" rel="noopener">Open local course copy ↗</a>` : ""
+  ].filter(Boolean).join("<br>") || "Internal source and visual audit record";
+  return `<article class="resource-record"><h3>${esc(item.resource)}</h3><p><strong>Source access</strong><br>${sourceLinks}</p><p><strong>Role</strong><br>${mark(item.role || "Source-supported course resource")}</p><p><strong>Boundary</strong><br>${mark(item.boundary)}</p></article>`;
 }).join("");
 
 const evidenceCards = data.assessment_and_evidence_status.map((item) => `<article class="mapping-record"><h3>${esc(item.item)}</h3><p><strong>Current status</strong><br>${mark(item.current_status)}</p><p><strong>Formal assessment boundary</strong><br>${mark(item.formal_boundary)}</p></article>`).join("");
@@ -88,33 +94,33 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Teacher-developed, source-mapped programme and scope-and-sequence record for the Programmable Light course.">
-  <title>Teacher programme &amp; scope and sequence | Programmable Light</title>
-  <link rel="stylesheet" href="guided/course.css?v=20260805c">
+  <meta name="description" content="Teacher-developed, source-mapped program and scope-and-sequence record for the Programmable Light course.">
+  <title>Teacher program &amp; scope and sequence | Programmable Light</title>
+  <link rel="stylesheet" href="guided/course.css?v=20260805d">
   <link rel="stylesheet" href="shared/sister-site.css" data-sister-site-styles>
   <script src="shared/hub-navigation.js" defer></script>
 </head>
-<body class="teacher-programme-page">
-  <a class="skip-link" href="#teacher-programme-content">Skip to teacher programme</a>
-  <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html">Programmable Light</a><nav class="nav-links" aria-label="Course navigation"><a href="index.html#pathway">Modules</a><a href="index.html#project-plan">Project plan</a><a href="folio.html">Folio</a><a href="index.html#outcomes">Outcomes</a><a href="teacher-resources.html" aria-current="page">Teacher programme</a></nav></div></header>
+<body class="teacher-program-page">
+  <a class="skip-link" href="#teacher-program-content">Skip to teacher program</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html">Programmable Light</a><nav class="nav-links" aria-label="Course navigation"><a href="index.html#pathway">Modules</a><a href="index.html#project-plan">Project plan</a><a href="folio.html">Folio</a><a href="index.html#outcomes">Outcomes</a><a href="teacher-resources.html" aria-current="page">Teacher program</a></nav></div></header>
 
-  <main id="teacher-programme-content" class="teacher-programme">
+  <main id="teacher-program-content" class="teacher-program">
     <header class="teacher-title-block">
       <a class="back-link" href="index.html">← Back to course home</a>
       <p class="eyebrow">Teacher resources · source-mapped professional record</p>
       <h1>${esc(data.integration_recommendation.page_title)}</h1>
-      <div class="teacher-status" role="note"><strong>Teacher-developed programme for local review.</strong> <strong>Not NESA approved.</strong> Confirm all local programme, assessment, practical and safety decisions before use.</div>
+      <div class="teacher-status" role="note"><strong>Teacher-developed program for local review.</strong> <strong>Not NESA approved.</strong> Confirm all local program, assessment, practical and safety decisions before use.</div>
       <button class="btn teacher-print-button" type="button" onclick="window.print()">${esc(data.integration_recommendation.print_button_text)}</button>
       <p class="teacher-public-boundary">${mark(data.integration_recommendation.public_access_boundary)}</p>
     </header>
 
-    ${section("document-control", "Programme status", "Document control and review status", `${documentControl}${list(data.audit_position, "teacher-audit-list")}`)}
+    ${section("document-control", "Program status", "Document control and review status", `${documentControl}${list(data.audit_position, "teacher-audit-list")}`)}
 
-    ${section("identity", "Authority", "Course identity and source hierarchy", `${courseIdentity}<div class="teacher-two-column"><article><h3>Source hierarchy</h3>${list(data.source_authority.hierarchy)}</article><article><h3>Exclusions</h3>${list(data.source_authority.exclusions)}</article></div><p><strong>Authorised Drive root:</strong> <a class="external-source" href="${esc(data.source_authority.authorised_drive_root.url)}" target="_blank" rel="noopener">${esc(data.source_authority.authorised_drive_root.title)} ↗</a> <code>${esc(data.source_authority.authorised_drive_root.id)}</code></p>`)}
+    ${section("identity", "Authority", "Course identity and source hierarchy", `${courseIdentity}<div class="teacher-two-column"><article><h3>Source hierarchy</h3>${list(data.source_authority.hierarchy)}</article><article><h3>Exclusions</h3>${list(data.source_authority.exclusions)}</article></div><p><strong>Authorised Drive root:</strong> <a class="external-source drive-source" href="${esc(data.source_authority.authorised_drive_root.url)}" target="_blank" rel="noopener">${esc(data.source_authority.authorised_drive_root.title)} ↗</a></p>`)}
 
     ${section("syllabus", "Current syllabus frame", `${data.syllabus.name} · implemented from ${data.syllabus.implementation_from}`, `<p>${mark(data.syllabus.whole_programme_boundary)}</p><h3>Course-requirement boundary</h3>${list(data.syllabus.course_requirements)}<h3>Focus-area contribution</h3><div class="mapping-grid">${focusAreaCards}</div><h3>Outcome opportunities</h3><p class="teacher-note">This is an opportunity map, not an assessed-outcome schedule.</p><div class="mapping-grid">${outcomeCards}</div><p class="official-links"><a class="external-source" href="${esc(data.syllabus.official_links.course_requirements)}" target="_blank" rel="noopener">Official course requirements ↗</a> <a class="external-source" href="${esc(data.syllabus.official_links.outcomes)}" target="_blank" rel="noopener">Official outcomes ↗</a> <a class="external-source" href="${esc(data.syllabus.official_links.organisation)}" target="_blank" rel="noopener">Official organisation and focus areas ↗</a></p>`)}
 
-    ${section("module-programme", "Teacher-developed integration frame", "Five-module scope and sequence", `<div class="teacher-status compact"><strong>Important:</strong> Website Weeks 1–10 organise learning access only. They do not create or authorise a practical production sequence.</div>${moduleCards}<article class="teacher-module cross-module"><h3>${esc(data.cross_module_evidence.title)} · ${esc(data.cross_module_evidence.folio_card)}</h3><p>${mark(data.cross_module_evidence.programme_treatment)}</p><p><strong>Sequence boundary:</strong> ${mark(data.cross_module_evidence.sequence_boundary)}</p></article>`)}
+    ${section("module-program", "Teacher-developed integration frame", "Five-module scope and sequence", `<div class="teacher-status compact"><strong>Important:</strong> Website Weeks 1–10 organise learning access only. They do not create or authorise a practical production sequence.</div>${moduleCards}<article class="teacher-module cross-module"><h3>${esc(data.cross_module_evidence.title)} · ${esc(data.cross_module_evidence.folio_card)}</h3><p>${mark(data.cross_module_evidence.programme_treatment)}</p><p><strong>Sequence boundary:</strong> ${mark(data.cross_module_evidence.sequence_boundary)}</p></article>`)}
 
     ${section("resource-register", "Plans and sources", "Plan and resource register", `<div class="resource-grid">${resourceCards}</div>`)}
 
@@ -127,7 +133,7 @@ const html = `<!doctype html>
     ${section("change-record", "Version control", "Review and change record", `<div class="mapping-grid">${changeCards}</div><p>For every later change, record the source, reason, affected outcome/evidence, test and result. Do not remove a <strong class="teacher-confirm">Teacher to confirm</strong> item until its local decision and evidence are recorded.</p>`)}
   </main>
 
-  <footer>Teacher-developed Programmable Light programme for local review · Not NESA approved · <a href="index.html">Course home</a></footer>
+  <footer>Teacher-developed Programmable Light program for local review · Not NESA approved · <a href="index.html">Course home</a></footer>
 </body>
 </html>
 `;

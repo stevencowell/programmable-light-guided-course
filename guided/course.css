@@ -320,7 +320,7 @@ textarea { min-height: 135px; resize: vertical; }
 .evidence-note { color: var(--muted); }
 .pathway-break { margin-top: 64px; }
 
-.teacher-programme { width: min(1180px, calc(100% - 36px)); margin: 0 auto; padding: 42px 0 72px; }
+.teacher-program { width: min(1180px, calc(100% - 36px)); margin: 0 auto; padding: 42px 0 72px; }
 .teacher-title-block { padding: clamp(24px, 5vw, 48px); border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(135deg, #f5faf8, #edf4f5); box-shadow: 0 16px 44px rgba(17, 46, 52, .1); }
 .teacher-title-block h1 { max-width: 18ch; margin: 18px 0 14px; font-size: clamp(2.1rem, 6vw, 4.2rem); line-height: 1.02; }
 .back-link { display: inline-block; color: var(--steel-dark); font-weight: 850; text-underline-offset: 3px; }
@@ -336,10 +336,10 @@ textarea { min-height: 135px; resize: vertical; }
 .teacher-confirm { color: #78410d; }
 .not-approved { color: var(--danger); }
 .table-scroll { width: 100%; margin-top: 22px; overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: white; }
-.teacher-programme table { width: 100%; border-collapse: collapse; min-width: 680px; }
-.teacher-programme th, .teacher-programme td { padding: 12px 14px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
-.teacher-programme thead th { background: #e7f0ee; color: var(--ink); }
-.teacher-programme tbody th { width: 20%; background: #f5f8f7; color: var(--ink); }
+.teacher-program table { width: 100%; border-collapse: collapse; min-width: 680px; }
+.teacher-program th, .teacher-program td { padding: 12px 14px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.teacher-program thead th { background: #e7f0ee; color: var(--ink); }
+.teacher-program tbody th { width: 20%; background: #f5f8f7; color: var(--ink); }
 .teacher-audit-list { margin-top: 22px; padding: 18px 22px 18px 40px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcfc; }
 .record-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 22px 0; padding: 1px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--line); }
 .record-list > div { display: grid; grid-template-columns: minmax(125px, .7fr) minmax(0, 1.3fr); background: white; }
@@ -359,8 +359,6 @@ textarea { min-height: 135px; resize: vertical; }
 .teacher-module__grid > div { min-width: 0; padding: 5px 14px 12px 0; }
 .teacher-boundary { margin-top: 16px; padding: 16px 18px; border-left: 5px solid var(--amber); border-radius: 0 12px 12px 0; background: var(--amber-pale); }
 .teacher-boundary > strong { display: block; margin-bottom: 8px; }
-.source-id-list { display: flex; flex-wrap: wrap; gap: 6px; }
-.source-id-list code, .resource-record code { max-width: 100%; padding: 3px 6px; border-radius: 6px; background: #eef2f1; overflow-wrap: anywhere; }
 .cross-module { background: #f3f8f6; }
 .resource-grid, .confirm-grid { margin-top: 22px; }
 .resource-record { min-width: 0; }
@@ -372,7 +370,7 @@ textarea { min-height: 135px; resize: vertical; }
 .confirm-record p { margin: 0; }
 .local-review-field { padding: 12px; border: 1px dashed #9b7a54; border-radius: 10px; background: #fffaf1; }
 .official-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
-.teacher-programme footer a { color: white; }
+.teacher-program footer a { color: white; }
 
 footer { background: var(--steel-dark); color: #dce8e9; padding: 34px 16px; text-align: center; }
 footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
@@ -406,7 +404,7 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
   .plan-sheet-gallery { grid-template-columns: 1fr; }
   .nav-links { gap: 5px; }
   .nav-links a { padding: 7px 3px; font-size: .9rem; }
-  .teacher-programme { width: calc(100% - 22px); padding-top: 18px; }
+  .teacher-program { width: calc(100% - 22px); padding-top: 18px; }
   .teacher-title-block, .teacher-module, .resource-record, .confirm-record { padding: 18px; }
   .confirm-record { grid-template-columns: 1fr; }
   .teacher-section { padding-top: 46px; }
@@ -441,9 +439,9 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
   .print-identity { display: block; margin: 0 0 5px; color: #344; font-size: 8pt; }
   .photo-preview { break-inside: avoid; }
   @page { size: A4 portrait; margin: 12mm; }
-  .teacher-programme-page .site-header, .teacher-programme-page .skip-link, .teacher-programme-page .teacher-print-button, .teacher-programme-page footer { display: none !important; }
-  .teacher-programme-page, .teacher-programme-page main { color: #000; background: #fff; }
-  .teacher-programme { width: 100%; margin: 0; padding: 0; font-size: 9pt; }
+  .teacher-program-page .site-header, .teacher-program-page .skip-link, .teacher-program-page .teacher-print-button, .teacher-program-page footer { display: none !important; }
+  .teacher-program-page, .teacher-program-page main { color: #000; background: #fff; }
+  .teacher-program { width: 100%; margin: 0; padding: 0; font-size: 9pt; }
   .teacher-title-block { padding: 0 0 8mm; border: 0; border-radius: 0; background: #fff; box-shadow: none; break-after: avoid; }
   .teacher-title-block h1 { max-width: none; margin: 4mm 0 3mm; color: #000; font-size: 24pt; }
   .teacher-title-block .back-link, .teacher-title-block .eyebrow { display: none; }
@@ -452,9 +450,9 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
   .teacher-section { padding: 7mm 0 0; break-before: auto; }
   .teacher-section > h2 { max-width: none; color: #000; font-size: 17pt; }
   .teacher-section h3, .teacher-section h4 { color: #000; }
-  .teacher-programme table { min-width: 0; font-size: 7.7pt; }
-  .teacher-programme th, .teacher-programme td { padding: 5px 6px; border-color: #777; }
-  .teacher-programme thead th, .teacher-programme tbody th { background: #fff; color: #000; }
+  .teacher-program table { min-width: 0; font-size: 7.7pt; }
+  .teacher-program th, .teacher-program td { padding: 5px 6px; border-color: #777; }
+  .teacher-program thead th, .teacher-program tbody th { background: #fff; color: #000; }
   .table-scroll { overflow: visible; border: 0; }
   .teacher-two-column, .teacher-module__grid, .resource-grid { grid-template-columns: 1fr 1fr; gap: 4mm; }
   .record-list, .mapping-grid { grid-template-columns: 1fr 1fr; gap: 3mm; border: 0; background: #fff; }
@@ -468,6 +466,6 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
   .teacher-module__grid { font-size: 8.3pt; }
   .teacher-boundary, .local-review-field { background: #fff; border-color: #777; }
   .confirm-record { grid-template-columns: 1.1fr 1fr 1fr 1fr; gap: 3mm; padding: 4mm; }
-  .source-id-list code, .resource-record code { background: #fff; }
   .external-source::after { content: " (" attr(href) ")"; color: #000; font-weight: 400; overflow-wrap: anywhere; }
+  .drive-source::after { content: none; }
 }
