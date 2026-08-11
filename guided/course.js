@@ -3,6 +3,33 @@
 
   const course = window.COURSE_DATA;
   if (!course) return;
+  const moduleSupport = [
+    { deck: "presentations/programmable-light-module-1.pptx", videos: [
+      { id: "eSYeHlwDCNA", title: "Computer Science Basics: Sequences, Selections, and Loops", channel: "LearnFree", watchFor: "Notice how ordered instructions and choices can control light behaviour. The clip supports the coding part of the lamp system; exact hardware and wiring remain teacher-confirmed." },
+      { id: "XOkPcLD5Soo", title: "The Hierarchy of Controls", channel: "Healthier Workforce Center", watchFor: "Identify why stronger controls come before personal protective equipment, then connect that order to your local workshop rules and teacher demonstrations." },
+      { id: "W1NA0CIo_FI", title: "Scales Explained! (For EGD Students)", channel: "Nicole EGD", watchFor: "Watch how a scale relationship is interpreted. Keep using written dimensions and the verified supplied drawing rather than measuring a resized screen." }
+    ] },
+    { deck: "presentations/programmable-light-module-2.pptx", videos: [
+      { id: "1SGr6uSPaLI", title: "raster vs vector", channel: "FAB[in]FIVE", watchFor: "Compare pixels with editable paths and connect that difference to resolution, enlargement and the quality of design research images." },
+      { id: "1SGr6uSPaLI", title: "raster vs vector", channel: "FAB[in]FIVE", watchFor: "Focus on why editable vector paths suit clear outlines and layers. Machine readiness still requires teacher checking and the authorised production process." },
+      { id: "1SGr6uSPaLI", title: "raster vs vector", channel: "FAB[in]FIVE", watchFor: "Notice how editable vector information can be revised. Use that capability to refine ideas against criteria rather than treating the first drawing as final." }
+    ] },
+    { deck: "presentations/programmable-light-module-3.pptx", videos: [
+      { id: "oZkYLVrTYe4", title: "The Way Wood Works — What Every Woodworker Needs to Know About Wood", channel: "Workshop Companion", watchFor: "Look for evidence that timber direction and natural variation affect behaviour. Keep your material decision tied to the approved project source and observed samples." },
+      { id: "ewVYf1wZwaY", title: "Understanding Sustainable Forestry — It's Child's Play!", channel: "Australian Forest Products Association", watchFor: "Identify the claims made about managed forests, then test them against origin, management, regeneration and other evidence before making a sustainability judgement." },
+      { id: "1zlZuUznxbg", title: "South Aussie with Cosi — Forestry (Sawmill)", channel: "Department of Primary Industries and Regions", watchFor: "Observe the broad production stages and how evidence can be recorded. Your practical sequence must still come from confirmed drawing notes and teacher instruction." }
+    ] },
+    { deck: "presentations/programmable-light-module-4.pptx", videos: [
+      { id: "kM9ASKAni_s", title: "Computer Science Basics: Algorithms", channel: "LearnFree", watchFor: "Identify how a clear algorithm describes steps before language-specific syntax is written." },
+      { id: "eSYeHlwDCNA", title: "Computer Science Basics: Sequences, Selections, and Loops", channel: "LearnFree", watchFor: "Distinguish sequence, selection and repetition, then connect those structures to variables, loops and conditionals in light behaviour." },
+      { id: "eSYeHlwDCNA", title: "Computer Science Basics: Sequences, Selections, and Loops", channel: "LearnFree", watchFor: "Track how instructions are processed to influence an output. The clip supports system thinking, not an assumed controller configuration or wiring method." }
+    ] },
+    { deck: "presentations/programmable-light-module-5.pptx", videos: [
+      { id: "eSYeHlwDCNA", title: "Computer Science Basics: Sequences, Selections, and Loops", channel: "LearnFree", watchFor: "Use the control structures as one part of an integrated solution. Record where design, structure, electronics, light and code affect one another." },
+      { id: "auv10y-dN4s", title: "How To Debug", channel: "CodeAI", watchFor: "Identify the controlled debugging steps: describe the fault, isolate a cause, change one approved element and retest the same criterion." },
+      { id: "auv10y-dN4s", title: "How To Debug", channel: "CodeAI", watchFor: "Notice the importance of recorded before-and-after evidence. Use that evidence with confirmed criteria when evaluating quality, sustainability and learning." }
+    ] }
+  ];
   const esc = (value) => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
   const folioRecordPointerKey = `${course.storagePrefix}:folio-record:v1`;
   const newRecordId = () => globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -74,6 +101,20 @@
     return `<section class="plan-guidance" aria-labelledby="${id}"><p class="eyebrow">Verified project plans</p><h3 id="${id}">${esc(guidance.heading)}</h3>${guidance.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}<h4>Plan-reading takeaways</h4><ul>${guidance.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="callout"><strong>Drawing source boundary:</strong> ${esc(guidance.boundary)}</div><div class="plan-sheet-gallery">${sheets}</div></section>`;
   }
 
+  function sectionVideoHtml(moduleNumber, sectionIndex) {
+    const video = moduleSupport[moduleNumber - 1]?.videos[sectionIndex];
+    if (!video) return "";
+    return `<section class="topic-video" aria-labelledby="video-title-${moduleNumber}-${sectionIndex + 1}">
+      <div class="topic-video__copy"><p class="eyebrow">Watch beside the theory</p><h3 id="video-title-${moduleNumber}-${sectionIndex + 1}">${esc(video.title)}</h3><p><strong>${esc(video.channel)}</strong></p><p>${esc(video.watchFor)}</p><button class="btn topic-video__play" type="button" data-play-video="${esc(video.id)}" data-video-title="${esc(video.title)}">Play video</button> <a class="topic-video__external" href="https://www.youtube.com/watch?v=${esc(video.id)}" target="_blank" rel="noopener">Open on YouTube ↗</a></div>
+      <div class="topic-video__player" data-video-player aria-label="Video player loads only after Play video is selected"><img src="https://i.ytimg.com/vi/${esc(video.id)}/hqdefault.jpg" alt="Thumbnail for ${esc(video.title)}"><span>Video loads after you choose Play video.</span></div>
+    </section>`;
+  }
+
+  function moduleSupportHtml(moduleNumber) {
+    const support = moduleSupport[moduleNumber - 1];
+    return `<section class="card module-support" aria-labelledby="module-support-title"><div><p class="eyebrow">Module support</p><h2 id="module-support-title">Learn, check and keep your evidence</h2><p>Use the student slides for a calm overview, then work through each full theory section, its ten mapped checks and the written evidence.</p></div><div class="module-support__actions"><a class="btn" href="${esc(support.deck)}" download>Download 8-slide presentation</a><a class="btn ghost" href="folio.html">Open project folio</a></div></section>`;
+  }
+
   function theoryHtml(section, index, moduleNumber) {
     const visual = section.visual ? `<figure class="theory-visual${index % 2 ? " theory-visual--left" : ""}"><a class="theory-visual__link zoomable-infographic" href="${esc(section.visual.image)}" target="_blank" rel="noopener" aria-label="Open teaching visual in a new tab: ${esc(section.visual.alt)}"><div class="theory-visual__image" aria-hidden="true" style="background-image:url('${esc(section.visual.image)}')"><span class="infographic-open-label">Open larger <span aria-hidden="true">↗</span></span></div></a><figcaption>${esc(section.visual.caption)}</figcaption></figure>` : "";
     return `<section class="card theory-section" id="theory-${moduleNumber}-${index + 1}" tabindex="-1">
@@ -83,6 +124,7 @@
       ${planGuidanceHtml(section)}
       ${toolPhotosHtml(section)}
       <h3 class="theory-chunk-heading">Key takeaways</h3><ul>${section.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
+      ${sectionVideoHtml(moduleNumber, index)}
       <div class="callout"><strong>Source boundary:</strong> ${esc(section.boundary)}</div>
     </section>${checksHtml(course.modules[moduleNumber - 1], moduleNumber, index)}${writtenHtml(course.modules[moduleNumber - 1], moduleNumber, index)}`;
   }
@@ -116,10 +158,22 @@
     document.querySelector("[data-module-kicker]").textContent = `${module.project} · Module ${module.projectModule} · Weeks ${module.weeks}`;
     document.querySelector("[data-module-title]").textContent = module.title;
     document.querySelector("[data-module-summary]").textContent = module.summary;
-    host.innerHTML = `<section class="card progress-panel"><strong data-progress-text>0% evidence entered</strong><div class="progress-track"><div class="progress-fill" data-progress-fill></div></div><div class="student-grid"><label>Student name<input data-save data-required name="student-name" type="text" autocomplete="name"></label><label>Class<input data-save data-required name="student-class" type="text"></label></div><p class="save-state" data-save-state>Autosaves on this browser and device.</p></section>${module.sections.map((section, index) => theoryHtml(section, index, number)).join("")}${checksHtml(module, number)}${writtenHtml(module, number)}<section class="card theory-section completion-box"><h2>Module completion</h2><label class="option"><input data-save type="checkbox" name="module-complete"> I have completed the theory, checks and written evidence, then saved or printed it as directed.</label><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></section><nav class="module-nav" aria-label="Module navigation">${number > 1 ? `<a class="btn ghost" href="module.html?module=${number - 1}">← Previous module</a>` : `<a class="btn ghost" href="index.html">← Course home</a>`}${number < course.modules.length ? `<a class="btn" href="module.html?module=${number + 1}">Next module →</a>` : `<a class="btn" href="folio.html">Open folio →</a>`}</nav>`;
+    host.innerHTML = `<section class="card progress-panel"><strong data-progress-text>0% evidence entered</strong><div class="progress-track"><div class="progress-fill" data-progress-fill></div></div><div class="student-grid"><label>Student name<input data-save data-required name="student-name" type="text" autocomplete="name"></label><label>Class<input data-save data-required name="student-class" type="text"></label></div><p class="save-state" data-save-state>Autosaves on this browser and device.</p></section>${moduleSupportHtml(number)}${module.sections.map((section, index) => theoryHtml(section, index, number)).join("")}${checksHtml(module, number)}${writtenHtml(module, number)}<section class="card theory-section completion-box"><h2>Module completion</h2><label class="option"><input data-save type="checkbox" name="module-complete"> I have completed the theory, checks and written evidence, then saved or printed it as directed.</label><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></section><nav class="module-nav" aria-label="Module navigation">${number > 1 ? `<a class="btn ghost" href="module.html?module=${number - 1}">← Previous module</a>` : `<a class="btn ghost" href="index.html">← Course home</a>`}${number < course.modules.length ? `<a class="btn" href="module.html?module=${number + 1}">Next module →</a>` : `<a class="btn" href="folio.html">Open folio →</a>`}</nav>`;
     module.checks.forEach((check, index) => host.querySelector(`[data-check-button="${index}"]`).addEventListener("click", () => { const selected = host.querySelector(`input[name="check-${index}"]:checked`); const feedback = host.querySelector(`[data-check-feedback="${index}"]`); if (!selected) { feedback.className = "feedback bad"; feedback.textContent = "Choose an answer first."; return; } const correct = Number(selected.value) === check.answerIndex; feedback.className = `feedback ${correct ? "good" : "bad"}`; feedback.textContent = `${correct ? "Correct. " + check.correctFeedback : "Not yet. " + check.incorrectFeedback}`; }));
     host.querySelectorAll("[data-toggle]").forEach((button) => button.addEventListener("click", () => { const panel = host.querySelector(`#${CSS.escape(button.dataset.toggle)}`); panel.hidden = !panel.hidden; button.setAttribute("aria-expanded", String(!panel.hidden)); }));
     host.querySelectorAll("[data-model-toggle]").forEach((button) => button.addEventListener("click", () => { const panel = host.querySelector(`#${CSS.escape(button.dataset.modelToggle)}`); panel.classList.toggle("open"); button.setAttribute("aria-expanded", String(panel.classList.contains("open"))); }));
+    host.querySelectorAll("[data-play-video]").forEach((button) => button.addEventListener("click", () => {
+      const card = button.closest(".topic-video");
+      const player = card.querySelector("[data-video-player]");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.playVideo}?autoplay=1&rel=0`;
+      iframe.title = button.dataset.videoTitle;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      player.replaceChildren(iframe);
+      button.disabled = true;
+      button.textContent = "Video playing";
+    }));
     bindAutosave(`module-${number}`, host);
   }
 
