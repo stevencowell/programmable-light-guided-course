@@ -1,5 +1,6 @@
 /* Task 34: the front page is an orientation and module entry point, not a resource directory. */
 .course-family-hero figcaption { display: none !important; }
+.course-family-intro__boundary { display: none !important; }
 .module-map .module-card:last-child { display: none !important; }
 #project-plan,
 #project-plan + .section,
