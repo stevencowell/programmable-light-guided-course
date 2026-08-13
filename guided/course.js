@@ -82,10 +82,8 @@
       return fields.some((field) => field.type === "radio" ? field.checked : String(fieldValue(field) || "").trim());
     }).length;
     const percent = Math.round((complete / required.length) * 100);
-    const fill = root.querySelector("[data-progress-fill]");
-    const text = root.querySelector("[data-progress-text]");
-    if (fill) fill.style.width = `${percent}%`;
-    if (text) text.textContent = `${percent}% evidence entered`;
+    root.querySelectorAll("[data-progress-fill]").forEach((fill) => { fill.style.width = `${percent}%`; });
+    root.querySelectorAll("[data-progress-text]").forEach((text) => { text.textContent = `${percent}% evidence entered`; });
   }
 
   function toolPhotosHtml(section) {
@@ -158,6 +156,8 @@
     document.querySelector("[data-module-kicker]").textContent = `${module.project} · Module ${module.projectModule} · Weeks ${module.weeks}`;
     document.querySelector("[data-module-title]").textContent = module.title;
     document.querySelector("[data-module-summary]").textContent = module.summary;
+    const aside = document.querySelector("[data-module-aside]");
+    if (aside) aside.innerHTML = `<h2>In this module</h2><ol>${module.sections.map((section, index) => `<li><a href="#theory-${number}-${index + 1}">${esc(section.title)}</a></li>`).join("")}</ol><h3>Your progress</h3><div class="progress-track" aria-hidden="true"><div class="progress-fill" data-progress-fill></div></div><p class="fine" data-progress-text>0% evidence entered</p><a class="module-aside__folio" href="folio.html">Open project folio →</a>`;
     host.innerHTML = `<section class="card progress-panel"><strong data-progress-text>0% evidence entered</strong><div class="progress-track"><div class="progress-fill" data-progress-fill></div></div><div class="student-grid"><label>Student name<input data-save data-required name="student-name" type="text" autocomplete="name"></label><label>Class<input data-save data-required name="student-class" type="text"></label></div><p class="save-state" data-save-state>Autosaves on this browser and device.</p></section>${moduleSupportHtml(number)}${module.sections.map((section, index) => theoryHtml(section, index, number)).join("")}${checksHtml(module, number)}${writtenHtml(module, number)}<section class="card theory-section completion-box"><h2>Module completion</h2><label class="option"><input data-save type="checkbox" name="module-complete"> I have completed the theory, checks and written evidence, then saved or printed it as directed.</label><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></section><nav class="module-nav" aria-label="Module navigation">${number > 1 ? `<a class="btn ghost" href="module.html?module=${number - 1}">← Previous module</a>` : `<a class="btn ghost" href="index.html">← Course home</a>`}${number < course.modules.length ? `<a class="btn" href="module.html?module=${number + 1}">Next module →</a>` : `<a class="btn" href="folio.html">Open folio →</a>`}</nav>`;
     module.checks.forEach((check, index) => host.querySelector(`[data-check-button="${index}"]`).addEventListener("click", () => { const selected = host.querySelector(`input[name="check-${index}"]:checked`); const feedback = host.querySelector(`[data-check-feedback="${index}"]`); if (!selected) { feedback.className = "feedback bad"; feedback.textContent = "Choose an answer first."; return; } const correct = Number(selected.value) === check.answerIndex; feedback.className = `feedback ${correct ? "good" : "bad"}`; feedback.textContent = `${correct ? "Correct. " + check.correctFeedback : "Not yet. " + check.incorrectFeedback}`; }));
     host.querySelectorAll("[data-toggle]").forEach((button) => button.addEventListener("click", () => { const panel = host.querySelector(`#${CSS.escape(button.dataset.toggle)}`); panel.hidden = !panel.hidden; button.setAttribute("aria-expanded", String(!panel.hidden)); }));
@@ -174,7 +174,7 @@
       button.disabled = true;
       button.textContent = "Video playing";
     }));
-    bindAutosave(`module-${number}`, host);
+    bindAutosave(`module-${number}`, host.closest(".module-layout") || host);
   }
 
   function bindFolio() {

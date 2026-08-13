@@ -134,13 +134,27 @@ h3 { font-size: 1.28rem; }
 .pending { border-left: 5px solid var(--amber); background: var(--amber-pale); }
 
 .module-hero {
-  color: white;
-  padding: 70px 0 54px;
-  background: linear-gradient(135deg, var(--steel-dark), var(--steel));
+  color: #153e2a;
+  min-height: 290px;
+  padding: 66px 0 54px;
+  background: linear-gradient(110deg, #edf3e4, #fff7d6);
+  border-block: 1px solid #d8decf;
 }
-.module-hero-inner { width: min(960px, calc(100% - 32px)); margin: auto; }
-.module-hero h1 { font-size: clamp(2.3rem, 6vw, 4.4rem); }
-.module-main, .folio-main { width: min(960px, calc(100% - 32px)); padding: 48px 0 90px; }
+.module-hero-inner { width: min(1160px, calc(100% - 32px)); margin: auto; }
+.module-hero .eyebrow { color: #c44935; }
+.module-hero h1 { font-size: clamp(2.8rem, 6vw, 4.8rem); }
+.module-hero p { color: #244538; }
+.module-layout { width: min(1160px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 90px; display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 32px; align-items: start; }
+.module-main, .folio-main { width: auto; padding: 0; }
+.module-aside { position: sticky; top: 92px; padding: 24px; }
+.module-aside h2 { font-size: clamp(1.75rem, 3vw, 2.3rem); }
+.module-aside h3 { margin-top: 28px; }
+.module-aside ol { margin: 0; padding-left: 1.35rem; }
+.module-aside li + li { margin-top: .65rem; }
+.module-aside a { color: var(--steel-dark); font-weight: 800; }
+.module-aside label { display: block; margin-top: 14px; }
+.module-aside .save-state { font-size: .85rem; color: var(--muted); }
+.module-aside__folio { display: inline-block; margin-top: 12px; }
 .progress-panel { margin: -28px auto 28px; position: relative; }
 .progress-track { height: 10px; background: #dae3e1; border-radius: 999px; overflow: hidden; }
 .progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--amber), #efbb62); transition: width .2s ease; }
@@ -392,6 +406,8 @@ footer { background: var(--steel-dark); color: #dce8e9; padding: 34px 16px; text
 footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
 
 @media (max-width: 820px) {
+  .module-layout { grid-template-columns: 1fr; width: calc(100% - 22px); padding: 30px 0 64px; }
+  .module-aside { position: static; order: -1; }
   .sister-hero .hero-inner { grid-template-columns: 1fr; }
   .hero-showcase { margin-top: -30px; }
   .theory-visual, .theory-visual--left { float: none; width: 100%; margin: 1.1rem 0; }
