@@ -37,6 +37,7 @@
     { label: "Course", href: "index.html", current: isCourseHome },
     { label: "Modules", href: "index.html#pathway", current: path.endsWith("/module.html") },
     { label: "Video learning", href: "youtube-library/video-library.html", current: path.includes("/youtube-library/") },
+    { label: "Busy Work", href: "https://stevencowell.github.io/busy-worksheets/?library=timber", external: true },
     { label: "My folio", href: "folio.html", current: path.endsWith("/folio.html") },
     { label: "Project plan", href: "assets/plans/programmable-lamp-drawing.pdf" },
     { label: "Teacher resources", href: "teacher-resources.html", current: path.endsWith("/teacher-resources.html") },
