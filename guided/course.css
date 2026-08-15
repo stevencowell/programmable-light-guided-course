@@ -144,7 +144,49 @@ h3 { font-size: 1.28rem; }
 .module-hero .eyebrow { color: #c44935; }
 .module-hero h1 { font-size: clamp(2.8rem, 6vw, 4.8rem); }
 .module-hero p { color: #244538; }
+.module-aligned-hero { min-height: 295px; padding: 0; background: linear-gradient(135deg, #e9f0e3, #fff4d6); border-block: 1px solid #d8decf; display: grid; align-items: center; }
+.module-aligned-hero .module-hero-inner { width: min(1180px, calc(100% - 36px)); padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.module-aligned-hero .eyebrow { color: #c44935; }
+.module-aligned-hero h1 { margin: 0 0 16px; color: #153e2a; font-size: 76.8px; line-height: 88.32px; }
+.module-aligned-hero p { max-width: 60ch; margin-bottom: 0; color: #244538; }
+.module-aligned-layout { display: block; width: min(1180px, calc(100% - 36px)); }
+.module-aligned-layout .module-main { width: 100%; }
+.module-aligned-layout .module-aside { display: none; }
+.module-aligned-layout .module-presentation-card,
+.module-aligned-layout .module-preview-card,
+.module-aligned-layout .guided-practice-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; margin: 0 0 22px; padding: 21.6px; }
+.module-aligned-layout .module-preview-card { min-height: 287px; border: 1px solid var(--line); border-left: 6px solid #0b5fad; background: #fff; box-shadow: 0 14px 38px rgba(32, 54, 34, .12); }
+.module-aligned-layout .module-presentation-card { min-height: 260px; border: 2px solid #b8cbaa; border-left: .55rem solid #315d3a; background: linear-gradient(135deg, #e7efe2, #fff7d8); box-shadow: 0 14px 38px rgba(32, 54, 34, .12); }
+.module-aligned-layout .module-presentation-card h2,
+.module-aligned-layout .module-preview-card h2,
+.module-aligned-layout .guided-practice-panel h2 { margin-bottom: 10px; color: #06447c; font-size: clamp(1.8rem, 3.2vw, 2.55rem); }
+.module-aligned-layout .module-presentation-card p,
+.module-aligned-layout .module-preview-card p,
+.module-aligned-layout .guided-practice-panel p { max-width: 68ch; margin-bottom: 0; color: #27444d; }
+.module-aligned-layout .module-preview-card h2 { color: #06447c; }
+.module-aligned-layout .module-presentation-card .btn { min-width: 230px; text-align: center; background: #0966b8; color: #fff; }
+.student-evidence { margin: 28px 0 20px; padding: 0; background: transparent; border: 0; box-shadow: none; }
+.student-evidence h2 { margin-bottom: 16px; color: #10252b; font-size: 1.35rem; }
+.student-evidence .eyebrow { color: #0665b5; }
+.student-evidence .save-state { margin: 18px 0 0; color: var(--muted); }
+.module-aligned-layout .guided-practice-panel { margin-top: 28px; border: 1px solid #b9d7ed; background: #f1f8ff; }
+.module-aligned-layout .guided-practice-panel .eyebrow { color: #0665b5; }
+.practice-now { display: inline-block; margin-left: 6px; padding: 3px 8px; border-radius: 999px; background: #dceeff; color: #06447c; font-size: .67rem; }
+.practice-progress { width: 78px; height: 78px; border: 7px solid #dce9f5; border-top-color: #0a68b8; border-radius: 50%; display: grid; place-content: center; text-align: center; color: #06447c; line-height: 1; }
+.practice-progress strong { font-size: 1rem; }
+.practice-progress span { margin-top: 3px; font-size: .62rem; font-weight: 750; }
+.module-aligned-layout .theory-section { margin-top: 28px; }
+.module-aligned-layout .theory-section p { max-width: none; }
+.diagnostic-list { margin: 0 0 1rem 1.3rem; padding: 0; color: #31484e; }
+.diagnostic-list li + li { margin-top: .35rem; }
 .module-layout { width: min(1160px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 90px; display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 32px; align-items: start; }
+.module-layout.module-aligned-layout {
+  display: block;
+  width: min(1180px, calc(100% - 36px));
+  padding: 72px 0 0;
+}
+.module-layout.module-aligned-layout .module-main { width: 100%; max-width: none; }
+.module-layout.module-aligned-layout .theory-section { width: 100%; max-width: none; }
 .module-main, .folio-main { width: auto; padding: 0; }
 .module-aside { position: sticky; top: 92px; padding: 24px; }
 .module-aside h2 { font-size: clamp(1.75rem, 3vw, 2.3rem); }
@@ -408,6 +450,15 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
 @media (max-width: 820px) {
   .module-layout { grid-template-columns: 1fr; width: calc(100% - 22px); padding: 30px 0 64px; }
   .module-aside { position: static; order: -1; }
+  .module-aligned-layout { width: calc(100% - 22px); }
+  .module-aligned-hero { min-height: 250px; padding: 0; }
+  .module-aligned-hero .module-hero-inner { width: min(100% - 24px, 1180px); padding: 0; }
+  .module-aligned-hero h1 { font-size: 40px; line-height: 46px; }
+  .module-aligned-layout .module-presentation-card,
+  .module-aligned-layout .module-preview-card,
+  .module-aligned-layout .guided-practice-panel { grid-template-columns: 1fr; padding: 25px; }
+  .module-aligned-layout .module-presentation-card .btn { width: 100%; }
+  .practice-progress { justify-self: start; }
   .sister-hero .hero-inner { grid-template-columns: 1fr; }
   .hero-showcase { margin-top: -30px; }
   .theory-visual, .theory-visual--left { float: none; width: 100%; margin: 1.1rem 0; }

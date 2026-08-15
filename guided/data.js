@@ -2269,9 +2269,11 @@ window.COURSE_DATA = {
             "Testing is the process of comparing an observed result with a confirmed criterion. A criterion describes what the solution should achieve or demonstrate. Testing is useful only when the criterion is known, the observation is recorded and the comparison is clear. The Programmable Lamp sources identify broad categories such as design, function, construction quality, electronics and programming, and aesthetics, but they do not provide completed criteria or pass thresholds.",
             "Debugging is a systematic process used to locate, explain and correct a fault in a digital system or plan. It should not involve random changes. A controlled debugging cycle begins by stating the confirmed criterion and predicting what should happen. Students then test one aspect, record what they observe and compare the evidence with the prediction.",
             "If the result does not match the criterion, the next step is to identify a likely cause. Diagnostic headings may help organise thinking:",
-            "Design or material",
-            "Connection or component",
-            "Code or logic",
+            [
+              "Design or material",
+              "Connection or component",
+              "Code or logic"
+            ],
             "These headings identify areas to investigate; they do not prove what caused a problem in this lamp. The supplied sources do not provide a fault table, circuit, code or confirmed symptoms.",
             "After teacher approval, students should change one controlled element. Changing one element helps show whether that change affected the result. The same aspect should then be retested under the confirmed procedure. Evidence may include observations, dated photographs, labelled notes, comparison statements or teacher-confirmed corrections.",
             "Improvement is demonstrated when recorded evidence shows that the revised result more closely meets the confirmed criterion. A change should not be described as an improvement simply because something was altered or because the result looks different.",

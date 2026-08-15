@@ -96,7 +96,7 @@
     if (!guidance) return "";
     const id = `plan-guidance-${section.id.replace(".", "-")}`;
     const sheets = guidance.sheets.map((sheet) => `<figure class="plan-sheet-card"><a class="plan-preview-link zoomable-infographic" href="${esc(sheet.open)}" target="_blank" rel="noopener" aria-label="Open larger original sheet in a new tab: ${esc(sheet.title)}"><img src="${esc(sheet.preview)}" alt="${esc(sheet.alt)}"><span class="infographic-open-label">Open larger <span aria-hidden="true">↗</span></span></a><figcaption><strong>${esc(sheet.title)}</strong><span>${esc(sheet.caption)}</span>${sheet.sourceUrl ? `<span><a href="${esc(sheet.sourceUrl)}" target="_blank" rel="noopener">Authorised Drive source ↗</a></span>` : ""}<span class="plan-actions"><a class="plan-open-link" href="${esc(sheet.open)}" target="_blank" rel="noopener">Open larger original sheet <span aria-hidden="true">↗</span></a>${sheet.original ? `<a class="plan-download-link" href="${esc(sheet.original)}" download>Download original DWG</a>` : ""}</span></figcaption></figure>`).join("");
-    return `<section class="plan-guidance" aria-labelledby="${id}"><p class="eyebrow">Verified project plans</p><h3 id="${id}">${esc(guidance.heading)}</h3>${guidance.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}<h4>Plan-reading takeaways</h4><ul>${guidance.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="callout"><strong>Drawing source boundary:</strong> ${esc(guidance.boundary)}</div><div class="plan-sheet-gallery">${sheets}</div></section>`;
+    return `<section class="plan-guidance" aria-labelledby="${id}"><p class="eyebrow">Verified project plans</p><h3 id="${id}">${esc(guidance.heading)}</h3>${guidance.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}<h4>Plan-reading takeaways</h4><ul>${guidance.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="plan-sheet-gallery">${sheets}</div></section>`;
   }
 
   function sectionVideoHtml(moduleNumber, sectionIndex) {
@@ -110,7 +110,15 @@
 
   function moduleSupportHtml(moduleNumber) {
     const support = moduleSupport[moduleNumber - 1];
-    return `<section class="card module-support" aria-labelledby="module-support-title"><div><p class="eyebrow">Module support</p><h2 id="module-support-title">Learn, check and keep your evidence</h2><p>Use the student slides for a calm overview, then work through each full theory section, its ten mapped checks and the written evidence.</p></div><div class="module-support__actions"><a class="btn" href="${esc(support.deck)}" download>Download 8-slide presentation</a><a class="btn ghost" href="folio.html">Open project folio</a></div></section>`;
+    return `<section class="card module-preview-card" aria-labelledby="module-preview-title"><div><p class="eyebrow">Module learning pack</p><h2 id="module-preview-title">Preview, learn and save evidence</h2><p>Work through the theory, knowledge checks and written responses in order. Your evidence autosaves on this browser and device.</p></div></section><section class="card module-presentation-card" aria-labelledby="module-presentation-title"><div><p class="eyebrow">Module presentation</p><h2 id="module-presentation-title">Learn with the slides</h2><p>Use the presentation to preview the three theory sections before you begin the module.</p></div><a class="btn" href="${esc(support.deck)}" download>Download presentation</a></section>`;
+  }
+
+  function studentEvidenceHtml() {
+    return `<section class="student-evidence" aria-labelledby="student-evidence-title"><p class="eyebrow">Student evidence</p><h2 id="student-evidence-title">Your details</h2><div class="student-grid"><label>Student name<input data-save data-required name="student-name" type="text" autocomplete="name"></label><label>Class<input data-save data-required name="student-class" type="text"></label></div><p class="save-state" data-save-state>Autosaves on this browser and device.</p></section>`;
+  }
+
+  function guidedPracticeHtml(module) {
+    return `<section class="card guided-practice-panel" aria-labelledby="guided-practice-title"><div><p class="eyebrow">Guided practice <span class="practice-now">Do now</span></p><h2 id="guided-practice-title">${esc(module.project)} knowledge checks</h2><p>Use the hints and feedback to strengthen your understanding before saving written evidence.</p></div><div class="practice-progress" aria-label="0 of 30 knowledge checks mastered"><strong>0/30</strong><span>mastered</span></div></section>`;
   }
 
   function theoryHtml(section, index, moduleNumber) {
@@ -118,12 +126,11 @@
     return `<section class="card theory-section" id="theory-${moduleNumber}-${index + 1}" tabindex="-1">
       <p class="eyebrow">Theory ${index + 1}</p><h2>${esc(section.title)}</h2>
       ${visual}
-      <h3 class="theory-chunk-heading">Theory</h3>${section.theory.map((p) => `<p>${esc(p)}</p>`).join("")}
+      <h3 class="theory-chunk-heading">Theory</h3>${section.theory.map((item) => Array.isArray(item) ? `<ul class="diagnostic-list">${item.map((entry) => `<li>${esc(entry)}</li>`).join("")}</ul>` : `<p>${esc(item)}</p>`).join("")}
       ${planGuidanceHtml(section)}
       ${toolPhotosHtml(section)}
       <h3 class="theory-chunk-heading">Key takeaways</h3><ul>${section.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
       ${sectionVideoHtml(moduleNumber, index)}
-      <div class="callout"><strong>Source boundary:</strong> ${esc(section.boundary)}</div>
     </section>${checksHtml(course.modules[moduleNumber - 1], moduleNumber, index)}${writtenHtml(course.modules[moduleNumber - 1], moduleNumber, index)}`;
   }
 
@@ -156,9 +163,12 @@
     document.querySelector("[data-module-kicker]").textContent = `${module.project} · Module ${module.projectModule} · Weeks ${module.weeks}`;
     document.querySelector("[data-module-title]").textContent = module.title;
     document.querySelector("[data-module-summary]").textContent = module.summary;
+    document.querySelector(".module-hero")?.classList.add("module-aligned-hero");
     const aside = document.querySelector("[data-module-aside]");
-    if (aside) aside.innerHTML = `<h2>In this module</h2><ol>${module.sections.map((section, index) => `<li><a href="#theory-${number}-${index + 1}">${esc(section.title)}</a></li>`).join("")}</ol><h3>Your progress</h3><div class="progress-track" aria-hidden="true"><div class="progress-fill" data-progress-fill></div></div><p class="fine" data-progress-text>0% evidence entered</p><a class="module-aside__folio" href="folio.html">Open project folio →</a>`;
-    host.innerHTML = `<section class="card progress-panel"><strong data-progress-text>0% evidence entered</strong><div class="progress-track"><div class="progress-fill" data-progress-fill></div></div><div class="student-grid"><label>Student name<input data-save data-required name="student-name" type="text" autocomplete="name"></label><label>Class<input data-save data-required name="student-class" type="text"></label></div><p class="save-state" data-save-state>Autosaves on this browser and device.</p></section>${moduleSupportHtml(number)}${module.sections.map((section, index) => theoryHtml(section, index, number)).join("")}${checksHtml(module, number)}${writtenHtml(module, number)}<section class="card theory-section completion-box"><h2>Module completion</h2><label class="option"><input data-save type="checkbox" name="module-complete"> I have completed the theory, checks and written evidence, then saved or printed it as directed.</label><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></section><nav class="module-nav" aria-label="Module navigation">${number > 1 ? `<a class="btn ghost" href="module.html?module=${number - 1}">← Previous module</a>` : `<a class="btn ghost" href="index.html">← Course home</a>`}${number < course.modules.length ? `<a class="btn" href="module.html?module=${number + 1}">Next module →</a>` : `<a class="btn" href="folio.html">Open folio →</a>`}</nav>`;
+    const layout = document.querySelector(".module-layout");
+    if (aside) aside.hidden = true;
+    layout?.classList.add("module-aligned-layout");
+    host.innerHTML = `${moduleSupportHtml(number)}${studentEvidenceHtml()}${guidedPracticeHtml(module)}${module.sections.map((section, index) => theoryHtml(section, index, number)).join("")}<section class="card theory-section completion-box"><h2>Module completion</h2><label class="option"><input data-save type="checkbox" name="module-complete"> I have completed the theory, checks and written evidence, then saved or printed it as directed.</label><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></section><nav class="module-nav" aria-label="Module navigation">${number > 1 ? `<a class="btn ghost" href="module.html?module=${number - 1}">← Previous module</a>` : `<a class="btn ghost" href="index.html">← Course home</a>`}${number < course.modules.length ? `<a class="btn" href="module.html?module=${number + 1}">Next module →</a>` : `<a class="btn" href="folio.html">Open folio →</a>`}</nav>`;
     module.checks.forEach((check, index) => host.querySelector(`[data-check-button="${index}"]`).addEventListener("click", () => { const selected = host.querySelector(`input[name="check-${index}"]:checked`); const feedback = host.querySelector(`[data-check-feedback="${index}"]`); if (!selected) { feedback.className = "feedback bad"; feedback.textContent = "Choose an answer first."; return; } const correct = Number(selected.value) === check.answerIndex; feedback.className = `feedback ${correct ? "good" : "bad"}`; feedback.textContent = `${correct ? "Correct. " + check.correctFeedback : "Not yet. " + check.incorrectFeedback}`; }));
     host.querySelectorAll("[data-toggle]").forEach((button) => button.addEventListener("click", () => { const panel = host.querySelector(`#${CSS.escape(button.dataset.toggle)}`); panel.hidden = !panel.hidden; button.setAttribute("aria-expanded", String(!panel.hidden)); }));
     host.querySelectorAll("[data-model-toggle]").forEach((button) => button.addEventListener("click", () => { const panel = host.querySelector(`#${CSS.escape(button.dataset.modelToggle)}`); panel.classList.toggle("open"); button.setAttribute("aria-expanded", String(panel.classList.contains("open"))); }));
