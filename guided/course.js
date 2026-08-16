@@ -123,13 +123,15 @@
 
   function theoryHtml(section, index, moduleNumber) {
     const visual = section.visual ? `<figure class="theory-visual${index % 2 ? " theory-visual--left" : ""}"><a class="theory-visual__link zoomable-infographic" href="${esc(section.visual.image)}" target="_blank" rel="noopener" aria-label="Open teaching visual in a new tab: ${esc(section.visual.alt)}"><div class="theory-visual__image" aria-hidden="true" style="background-image:url('${esc(section.visual.image)}')"><span class="infographic-open-label">Open larger <span aria-hidden="true">↗</span></span></div></a><figcaption>${esc(section.visual.caption)}</figcaption></figure>` : "";
+    const [keyIdea, ...otherTakeaways] = section.takeaways;
     return `<section class="card theory-section" id="theory-${moduleNumber}-${index + 1}" tabindex="-1">
       <p class="eyebrow">Theory ${index + 1}</p><h2>${esc(section.title)}</h2>
       ${visual}
       <h3 class="theory-chunk-heading">Theory</h3>${section.theory.map((item) => Array.isArray(item) ? `<ul class="diagnostic-list">${item.map((entry) => `<li>${esc(entry)}</li>`).join("")}</ul>` : `<p>${esc(item)}</p>`).join("")}
+      ${keyIdea ? `<aside class="key-idea"><span class="key-idea__mark" aria-hidden="true">K</span><p><strong>Key idea:</strong> ${esc(keyIdea)}</p></aside>` : ""}
       ${planGuidanceHtml(section)}
       ${toolPhotosHtml(section)}
-      <h3 class="theory-chunk-heading">Key takeaways</h3><ul>${section.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
+      ${otherTakeaways.length ? `<h3 class="theory-chunk-heading">Key takeaways</h3><ul>${otherTakeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}
       ${sectionVideoHtml(moduleNumber, index)}
     </section>${checksHtml(course.modules[moduleNumber - 1], moduleNumber, index)}${writtenHtml(course.modules[moduleNumber - 1], moduleNumber, index)}`;
   }

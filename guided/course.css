@@ -179,6 +179,10 @@ h3 { font-size: 1.28rem; }
 .module-aligned-layout .theory-section p { max-width: none; }
 .diagnostic-list { margin: 0 0 1rem 1.3rem; padding: 0; color: #31484e; }
 .diagnostic-list li + li { margin-top: .35rem; }
+.key-idea { clear: both; display: flex; gap: 20px; align-items: flex-start; margin: 28px 0; padding: 20px 22px; border: 1px solid #b9d7ed; border-radius: 16px; background: #eaf4ff; color: #102f45; }
+.key-idea__mark { flex: 0 0 42px; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: #0966b8; color: #fff; font-size: 1.35rem; font-weight: 850; }
+.key-idea p { margin: 1px 0 0; font-size: 1.08rem; line-height: 1.55; }
+.key-idea strong { color: #06447c; }
 .module-layout { width: min(1160px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 90px; display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 32px; align-items: start; }
 .module-layout.module-aligned-layout {
   display: block;
@@ -459,6 +463,8 @@ footer a { color: #fff; font-weight: 800; text-underline-offset: 3px; }
   .module-aligned-layout .guided-practice-panel { grid-template-columns: 1fr; padding: 25px; }
   .module-aligned-layout .module-presentation-card .btn { width: 100%; }
   .practice-progress { justify-self: start; }
+  .key-idea { gap: 14px; padding: 18px; }
+  .key-idea__mark { flex-basis: 38px; width: 38px; height: 38px; }
   .sister-hero .hero-inner { grid-template-columns: 1fr; }
   .hero-showcase { margin-top: -30px; }
   .theory-visual, .theory-visual--left { float: none; width: 100%; margin: 1.1rem 0; }
